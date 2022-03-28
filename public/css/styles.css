@@ -1,0 +1,97 @@
+header{
+    background-color: salmon;
+    text-align:center;
+}
+body{
+    background-color:azure;
+}
+.main1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+    border-style: dashed;
+    border-color: grey;
+    border-width: 2px;
+    background-color: white;
+    column-gap:25px;
+}
+.box1{
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+    justify-content: left;
+    flex-grow:1;
+
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    box-sizing: content-box;
+    flex-grow: 0;
+    align-items: stretch;
+    
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    box-sizing: content-box;
+    flex-grow: 30;
+}
+footer{
+    background-color: lightblue;
+    text-align:center;
+}
+.img-chica{
+    width: 25%;
+
+}
+.titulos{   
+    color: black;
+    text-align: center;
+}
+.titulo2{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+.precio{
+    color: green;
+    text-align: center;
+    font-size: 25px;
+}
+
+.boton{
+    margin: 0 auto;
+    padding: 5px;
+    animation-name: color1;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+@keyframes color{
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: #4791d0;
+    }
+}
+.flexfotos{
+    text-align: center;
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    border-color: #ebebeb;
+    border-style: solid;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+}
+<!-- .nav-bar{ 
+    position: fixed;
+    width:100%;
+} -->
