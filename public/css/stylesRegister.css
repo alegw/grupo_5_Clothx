@@ -1,0 +1,85 @@
+.caja-form{
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+
+}
+
+ .caja-form p{
+     margin: 10px;
+ }
+
+.campos{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.campos input{
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+
+.campos button{
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+
+
+.campos .enviar{
+    margin-top: 10px;
+}
+
+.campos .enviar:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+
+
+
+.formulario{
+    border-top: 1px solid rgb(191, 191, 191);
+    border-bottom: 1px solid rgb(191, 191, 191);
+    margin: 20px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
+}
+
+ .letra-chica{
+     font-size: 10px;
+ }
+
+ .olvide-y-crear{
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .letra-olvide{
+    font-size: 13px;
+    display: inline;
+
+}
+
+
+
+ @media (min-width: 1000px) {
+    .caja-form{
+        width: 500px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 50px;
+    
+    }
+ }

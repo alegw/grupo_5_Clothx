@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clothx - Registro</title>
+        <link href="css/stylesHome.css" rel="stylesheet" type="text/css">
+        <link href="css/stylesRegister.css" rel="stylesheet" type="text/css">
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+    
+    </head>
 <body>
+<!-- Header -->
+<header>
+    <div class="top-header">
+      <div class="imagen-header-logo">
+        <a href="/index"><img class="imagen-logo" src="/img/Logo.png" alt="" width="5%"/></a>
+      </div>
+      <form action="POST">
+      <div class="lupita"><input class="campo" type="text" placeholder="Buscar productos, marcas"><i class="fas fa-search"></i></div>
+      </form>
+  
+    <div class="botones">
+      <div class="favoritos-icono"><i class="fas fa-heart"></i></div>
+      <div class="carrito-icono"><i class="fas fa-shopping-cart"></i></div>
+      <div class="perfil-icono"><i class="fas fa-user-circle"></i></div>
+    </div>
+  </div>
+  </header>
+     <div class="caja-form">
+
+    <h2 class="titulo">Datos de registro</h2>
+    <p>Completa los siguientes datos para ser usuario de nuestra tienda</p>
+
+    
+    <form class="formulario" action="/registro" method="POST">
+
+
+        <div class="campos">
+             <label for="nombre"> Nombre</label>
+             <input type="text" name="nombre" id="">
+         </div>
+       
+        
+         <div class="campos">
+            <label for="nombre"> Apellido</label>
+            <input type="text" name="apellido" id="">
+        </div>
+      
+       
+        <div class="campos">
+            <label for="nombre"> Teléfono</label>
+            <input type="tel" name="telefono" id="">
+        </div>
+      
+
+        <div class="campos">
+            <label for="nombre"> Email</label>
+            <input type="email" name="email" id="">
+        </div>
+      
+
+        <div class="campos">
+            <label for="nombre"> Contraseña</label>
+            <input type="password" name="pass" id="">
+        </div>
+      
+
+        <div class="campos">
+            <label for="nombre"> Confirmar Contraseña</label>
+            <input type="password" name="pass2" id="">
+        </div>
+      
+        <div class="campos">
+            <input class="enviar" type="submit"> 
+        </div>
+       
+       
+       
+       
+
+
+
+
+
+    </form>
+
+    <p class="letra-chica">Al crear una cuenta, aceptas que has leido, entendido, y aceptado la Términos y condiciones y da su consentimiento para cada tipo de transacción que requiera su consentimiento expreso para el procesamiento de sus datos personales bajo la Politica de Privacidad.</p>
+
+
+  </div>
+
+
+
+
+
+  <!-- footer -->
+    
+  <footer>
+    <p>Todo los terminos y derechos estan sujetos a Clothx</p>
+  </footer>
+
     
 </body>
 </html>
