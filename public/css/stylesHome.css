@@ -123,6 +123,23 @@ footer{
  position: relative;
  z-index: 1;
 }
+
+.container{
+   position: relative;
+   z-index:1;
+   width: 40%;
+   background-color: rgba(255,255,255,0.3);
+   backdrop-filter: blur(4px);
+   margin: 3%;
+   margin-top: 6%;
+   padding: 2%;
+   border-radius: 15px;
+
+}
+.text{
+   position: relative;
+   z-index:1;
+}
 .novedades article{
    box-sizing:content-box ;
    display: inline-flex;
