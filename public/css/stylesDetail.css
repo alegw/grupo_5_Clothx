@@ -1,7 +1,4 @@
-header{
-    background-color: salmon;
-    text-align:center;
-}
+
 body{
     background-color:azure;
 }
@@ -10,7 +7,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     padding: 2%;
-    border-style: dashed;
+    border-style: solid;
     border-color: grey;
     border-width: 2px;
     background-color: white;
@@ -42,9 +39,10 @@ body{
     flex-grow: 30;
 }
 footer{
-    background-color: lightblue;
-    text-align:center;
-}
+    padding: 10%;
+    background-color: #0F80A4;
+    color: white;
+ }
 .img-chica{
     width: 25%;
 

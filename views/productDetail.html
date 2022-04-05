@@ -6,68 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./css/styles.css" rel="stylesheet" type="text/css">
-</head>
+    <link href="./css/stylesDetail.css" rel="stylesheet" type="text/css">
+    <link href="css/stylesHome.css" rel="stylesheet" type="text/css">
+    <link href="css/stylesRegister.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" </head>
 
 <body>
-    <header class="header">
-        <div>
-            <h1>RESERVADO PARA EL HEADER</h1>
+    <header>
+        <div class="top-header">
+            <div class="imagen-header-logo">
+                <a href="/index"><img class="imagen-logo" src="/img/Logo.png" alt="" width="5%" /></a>
+            </div>
+            <form action="POST">
+                <div class="lupita"><input class="campo" type="text" placeholder="Buscar productos, marcas"><i
+                        class="fas fa-search"></i></div>
+            </form>
+
+            <div class="botones">
+                <div class="favoritos-icono"><i class="fas fa-heart"></i></div>
+                <div class="carrito-icono"><i class="fas fa-shopping-cart"></i></div>
+                <div class="perfil-icono"><i class="fas fa-user-circle"></i></div>
+            </div>
         </div>
     </header>
     <hr>
     <main>
-    <div class="main1">
-        <div class="box1">
-            <div><img src="/img/Remera-amarilla.jpg" alt="Remera amarilla"></div>
-        </div>
-        <div class="box2">
-            <div><img class ="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
-            <div><img class ="img-chica" src="/img/Remera-roja.jpg" alt="Remera roja"></div>
-            <div><img class ="img-chica" src="/img/Remera-negra.jpg" alt="Remera negra"></div>
-            <div><img class ="img-chica" src="/img/Remera-verde.jpg" alt="Remera verde"></div>
-        </div>
-        <div class="box3">
-            <div class="titulos"><h2>Remera Lisa</h2></div>
-            <section><h4>Informacion de producto</h4>  
-                <div>Lorem ipsum dolor sit amet consectetur adipisicin</div>
-            </section>
-            <section ><label for="Variantes"><h4>Variantes</h4></label> 
-                <select name="Color">
-                    <option value="Azul">Azul</option>
-                    <option value="Rojo">Rojo</option>
-                    <option value="Negro">Negro</option>
-                    <option value="Verde">Verde</option>
-                </select>
-            </section>
-            <section ><label for="Talles"><h4>Talles</h4></label> 
-                <input type="radio" id="s" value="s">S
-                <input type="radio" id="m" value="m">M
-                <input type="radio" id="l" value="l">L
-                <input type="radio" id="xl" value="xl">XL
-            </section>
-            <div class="titulo2"><h4>PRECIO</h4>
-                <div class="precio"> $2.000</div>
+        <div class="main1">
+            <div class="box1">
+                <div><img src="/img/Remera-amarilla.jpg" alt="Remera amarilla"></div>
             </div>
-            <div class="boton"><button>AGREGAR A CARRITO</button></div>
-        </div>
-            
+            <div class="box2">
+                <div><img class="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
+                <div><img class="img-chica" src="/img/Remera-roja.jpg" alt="Remera roja"></div>
+                <div><img class="img-chica" src="/img/Remera-negra.jpg" alt="Remera negra"></div>
+                <div><img class="img-chica" src="/img/Remera-verde.jpg" alt="Remera verde"></div>
+            </div>
+            <div class="box3">
+                <div class="titulos">
+                    <h2>Remera Lisa</h2>
+                </div>
+                <section>
+                    <h4>Informacion de producto</h4>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicin</div>
+                </section>
+                <section><label for="Variantes">
+                        <h4>Variantes</h4>
+                    </label>
+                    <select name="Color">
+                        <option value="Azul">Azul</option>
+                        <option value="Rojo">Rojo</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Verde">Verde</option>
+                    </select>
+                </section>
+                <section><label for="Talles">
+                        <h4>Talles</h4>
+                    </label>
+                    <input type="radio" id="s" value="s">S
+                    <input type="radio" id="m" value="m">M
+                    <input type="radio" id="l" value="l">L
+                    <input type="radio" id="xl" value="xl">XL
+                </section>
+                <div class="titulo2">
+                    <h4>PRECIO</h4>
+                    <div class="precio"> $2.000</div>
+                </div>
+                <div class="boton"><button>AGREGAR A CARRITO</button></div>
+            </div>
+
         </div>
         <div class="titulos">Productos relacionados</div>
         <div class="flexfotos">
-            <div><img class ="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
-            <div><img class ="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
-            <div><img class ="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
-            <div><img class ="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
+            <div><img class="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
+            <div><img class="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
+            <div><img class="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
+            <div><img class="img-chica" src="/img/Remera-azul.jpg" alt="Remera azul"></div>
 
         </div>
     </main>
     <hr>
-    <footer class="footer">
-        <div>
-            <h1>RESERVADO PARA EL FOOTER</h1>
-        </div>
-    </footer>
+    <footer>
+        <p>Todo los terminos y derechos estan sujetos a Clothx</p>
+      </footer>
 </body>
 
 </html>
