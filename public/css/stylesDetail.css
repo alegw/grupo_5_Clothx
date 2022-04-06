@@ -3,40 +3,32 @@ body{
     background-color:azure;
 }
 .main1{
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
     padding: 2%;
-    border-style: solid;
-    border-color: grey;
-    border-width: 2px;
-    background-color: white;
-    column-gap:25px;
+}
+.box1-2{
+    display:inline-flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-between;
 }
 .box1{
-    display: flex;
-    flex-direction: row;
-    box-sizing: content-box;
-    justify-content: left;
-    flex-grow:1;
-
+    width: 65%;
 }
 .box2{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: left;
-    box-sizing: content-box;
-    flex-grow: 0;
-    align-items: stretch;
-    
+    width: 35%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .box3{
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    box-sizing: content-box;
-    flex-grow: 30;
+    width: 31%;
 }
 footer{
     padding: 10%;
@@ -44,7 +36,7 @@ footer{
     color: white;
  }
 .img-chica{
-    width: 25%;
+    width: 45%;
 
 }
 .titulos{   
@@ -54,11 +46,9 @@ footer{
 .titulo2{
     font-size: 20px;
     color: black;
-    text-align: center;
 }
 .precio{
     color: green;
-    text-align: center;
     font-size: 25px;
 }
 

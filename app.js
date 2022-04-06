@@ -6,12 +6,16 @@ app.use(express.static("public"));
 app.listen(5000, ()=> console.log("Esto fue exitoso"))
 
 
+app.get("/", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/index.html"))}
+) //agregue esta linea para que te dirija al home cuando ingresas a la raiz //
+
 app.get("/home", function (req,res){
     res.sendFile(path.join(__dirname, "/views/index.html"))}
 )
 
-app.get("/detail", function (req,res){
-    res.sendFile(path.join(__dirname, "/views/productDetail.html"))}
+app.get("/detail1", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/productDetail1.html"))}
 )
 
 app.get("/cart", function (req,res){
