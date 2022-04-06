@@ -17,6 +17,18 @@ app.get("/home", function (req,res){
 app.get("/detail1", function (req,res){
     res.sendFile(path.join(__dirname, "/views/productDetail1.html"))}
 )
+app.get("/detail2", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/productDetail2.html"))}
+)
+app.get("/detail3", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/productDetail3.html"))}
+)
+app.get("/detail4", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/productDetail4.html"))}
+)
+app.get("/detail5", function (req,res){
+    res.sendFile(path.join(__dirname, "/views/productDetail5.html"))}
+)
 
 app.get("/cart", function (req,res){
     res.sendFile(path.join(__dirname, "/views/productCart.html"))}
