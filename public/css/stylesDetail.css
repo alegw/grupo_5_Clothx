@@ -39,9 +39,10 @@ footer{
     width: 45%;
 
 }
-.titulos{   
-    color: black;
+.titulos{
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
+    color: #0F80A4;
 }
 .titulo2{
     font-size: 20px;
@@ -83,3 +84,9 @@ footer{
     position: fixed;
     width:100%;
 } -->
+
+.flexfotos img{
+    display: inline-flex;
+    border-radius: 30%;
+    text-align: center;
+}
