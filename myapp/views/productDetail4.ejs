@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/stylesDetail.css" rel="stylesheet" type="text/css">
+    <link href="css/stylesHome.css" rel="stylesheet" type="text/css">
+    <link href="css/stylesRegister.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" </head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="imagen-header-logo">
+                <a href="/home"><img class="imagen-logo" src="/img/Logo.png" alt="" width="5%" /></a>
+            </div>
+            <form action="POST">
+                <div class="lupita"><input class="campo" type="text" placeholder="Buscar productos, marcas"><i
+                        class="fas fa-search"></i></div>
+            </form>
+
+            <div class="botones">
+                <div class="favoritos-icono"><i class="fas fa-heart"></i></div>
+                <div class="carrito-icono"><i class="fas fa-shopping-cart"></i></div>
+                <div class="perfil-icono"><i class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="main1">
+            <div class="box1-2">
+                <div class="box1">
+                    <div><img style="max-width: 100%;" src="/img/Productos/Ropa4-1.jpg" alt="Buzo azul"></div>
+                </div>
+                <div class="box2">
+                    <div><img class="img-chica" src="/img/Productos/Ropa4-2.jpg" alt="Buzo verde"></div>
+                    <div><img class="img-chica" src="/img/Productos/Ropa4-3.jpg" alt="Buzo violeta"></div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="titulos">
+                    <h2>Buzo Liso</h2>
+                </div>
+                <section>
+                    <h4>Informacion de producto</h4>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicin</div>
+                </section>
+                <section><label for="Variantes">
+                        <h4>Variantes</h4>
+                    </label>
+                    <select name="Color">
+                        <option value="Azul">Azul</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Violeta">Violeta</option>
+                </section>
+                <section><label for="Talles">
+                        <h4>Talles</h4>
+                    </label>
+                    <input type="radio" id="s" value="s">S
+                    <input type="radio" id="m" value="m">M
+                    <input type="radio" id="l" value="l">L
+                    <input type="radio" id="xl" value="xl">XL
+                </section>
+                <div class="titulo2">
+                    <h4>PRECIO</h4>
+                    <div class="precio"> $2.000</div>
+                </div>
+                <br>
+
+                <div class="boton" style="text-align:center"><button>AGREGAR A CARRITO</button></div>
+            </div>
+
+        </div>
+        <h2 class="titulos">Productos relacionados</h2>
+        <div class="flexfotos">
+            <div><a href="detail1"><img class="img-chica" src="/img/Productos/Ropa1-1.jpg" alt="Pollera fuxia"></a></div>
+            <div><a href="detail2"><img class="img-chica" src="/img/Productos/Ropa2-1.jpg" alt="Short fuxia"></a></div>
+            <div><a href="detail3"><img class="img-chica" src="/img/Productos/Ropa3-1.jpg" alt="Camisa amarilla"></a></div>
+            <div><a href="detail5"><img class="img-chica" src="/img/Productos/Ropa5-1.jpg" alt="Gorro beige"></a></div>
+
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <p>Todo los terminos y derechos estan sujetos a Clothx</p>
+    </footer>
+</body>
+
+</html>

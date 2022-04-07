@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/productCartstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="imagen-header-logo">
+          <a href="/index"
+            ><img class="imagen-logo" src="/img/Logo.png" alt="" width="5%"
+          /></a>
+        </div>
+        <form action="POST">
+          <div class="lupita">
+            <input
+              class="campo"
+              type="text"
+              placeholder="Buscar productos, marcas"
+            /><i class="fas fa-search"></i>
+          </div>
+        </form>
+
+        <div class="botones">
+          <div class="favoritos-icono"><i class="fas fa-heart"></i></div>
+          <div class="carrito-icono"><i class="fas fa-shopping-cart"></i></div>
+          <div class="perfil-icono"><i class="fas fa-user-circle"></i></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-cart">
+        <article class="product-cart">
+          <img class="product-image-min" src="" alt="" />
+          <div class="product-name-cart">nombre del producto</div>
+          <div class="prodcut-price-cart">
+            <h4>Precio:</h4>
+            $9999.99
+          </div>
+          <div class="product-addremove-cart">
+            <i class="fas fa-minus"></i> 1 <i class="fas fa-plus"></i>
+          </div>
+        </article>
+        <button class="button-cart" type="button">Vaciar Carrito</button>
+        <button class="button-cart" type="button">Finalizar Compra</button>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
