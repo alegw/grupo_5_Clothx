@@ -6,6 +6,8 @@ app.use(express.static("public"));
 app.listen(5000, ()=> console.log("Esto fue exitoso"))
 
 
+app.set('view engine', 'ejs');
+
 app.get("/", function (req,res){
     res.sendFile(path.join(__dirname, "/views/index.html"))}
 ) //agregue esta linea para que te dirija al home cuando ingresas a la raiz //
