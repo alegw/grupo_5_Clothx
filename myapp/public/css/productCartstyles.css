@@ -42,7 +42,7 @@
 
 .section-cart {
   border: 1px solid black;
-  width: 18%;
+  width: 28%;
   position: absolute;
   left: 70%;
   text-align: left;
@@ -51,6 +51,9 @@
 
 .product-cart {
   text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
 }
 
 .button-cart {
@@ -67,4 +70,15 @@
   margin-top: 5px;
   width: 20%;
   padding-right: 8%;
+  margin-bottom: 90px;
+}
+
+.product-image-min{
+  border-radius: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.prodcut-price-cart {
+  display: flex;
 }
