@@ -12,3 +12,5 @@ carrito de compras que sea como una slide dentro de la pagina actual y no un sit
 seguimiento de pedidos: https://www.mercadolibre.com.ar/
 Categorias y filtros que sean bloques individuales con scroll en vez de una larga lista : https://www.dafiti.com.ar/
 login y copiar el registro para que sea similar al login: https://www.mercadolibre.com.ar/
+
+link para acceder a Trello: https://trello.com/b/TrMurtjr/kanban-template
