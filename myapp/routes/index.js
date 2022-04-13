@@ -40,6 +40,8 @@ router.get('/productCreate', function(req, res, next) {
   res.render('productCreate', { title: 'Express' });
 });
 
-
+router.get('/productEdit', function(req, res, next) {
+  res.render('productEdit', { title: 'Express' });
+});
 
 module.exports = router;
