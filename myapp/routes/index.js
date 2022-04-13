@@ -36,6 +36,9 @@ router.get('/productCart', function(req, res, next) {
 router.get('/reestablecer', function(req, res, next) {
   res.render('reestablecer', { title: 'Express' });
 });
+router.get('/productCreate', function(req, res, next) {
+  res.render('productCreate', { title: 'Express' });
+});
 
 
 
