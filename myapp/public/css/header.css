@@ -1,0 +1,94 @@
+.top-header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+ 
+ }
+ .imagen-header-logo{
+     margin-left: 1%;
+     justify-content: start;
+ }
+ .imagen-logo{
+    width: 8%;
+ }
+ 
+ .lupita{
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    display: inline;
+    position: absolute;
+    left: 40%;
+    width: 200px;
+    margin-top: 0.5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    
+ }
+ 
+ .campo{
+    border: none;
+ }
+ 
+ .logoybuscador{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+ }
+ 
+ .botones{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5%;
+    height:80%;
+    
+ }
+ .botones i{
+    color: black;
+    margin-left: 20px;
+    margin-right: 5px;
+    padding-right: 20px;
+ };
+
+ @media (max-width: 460px){
+     /* Mobile*/
+    .top-header{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 10px;
+    };
+    .imagen-logo{
+        width: 30%;
+     }
+};
+ @media (max-width: 768px){
+    /* Pc*/
+    .top-header{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 5px;
+        margin: 5px;
+    };
+    .imagen-logo{
+        width: 8%;
+     }
+ }
+ @media (min-width: 1200px){
+    /* Pc*/
+    .top-header{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 5px;
+        margin: 5px;
+    };
+    .imagen-logo{
+        width: 1.5%;
+     }
+ }
