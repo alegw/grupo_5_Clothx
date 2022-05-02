@@ -1,14 +1,14 @@
 [
   {
     "id": 0,
-    "name": "Rx Act saaaainus congestion and pain",
+    "name": "Pollera Lisa",
     "description": "Econolinssssse E250",
-    "image": "http://dummyimage.com/156x100.png/cc0000/ffffff",
-    "category": "Electrician",
-    "colors": "Orange",
-    "price": 7367.52,
-    "size": "S",
-    "gender": "Male"
+    "image": "/img/Productos/Ropa1-1.jpg",
+    "category": "Ropa",
+    "colors": "Fuxia, Celeste, Violeta, Rojo, Marron",
+    "price": 2000,
+    "size": "S, M, L, XL",
+    "gender": "Mujer"
   },
   {
     "id": 1,
