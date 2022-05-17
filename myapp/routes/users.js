@@ -1,10 +1,42 @@
-var express = require('express');
-var router = express.Router();
+// ************ Require's ************
+const express = require('express');
+const router = express.Router();
+const multer = require('multer')
+const path = require('path')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// ************ Controller Require ************
+const usuariosController = require('../controllers/usuariosController');
+
+// ************ Multer ************ 
+var configuracion = multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null, 'public/img/usuarios')
+    },
+    filename: function(req,file,cb){
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+var upload = multer({storage: configuracion})
+
+/*** GET ALL usuarios ***/ 
+router.get('/', usuariosController.index); 
+
+/*** CREATE ONE PRODUCT ***/ 
+router.get('/create', usuariosController.create); 
+
+router.post('/', [ upload.any() ] , usuariosController.store); 
+
+
+/*** GET ONE PRODUCT ***/ 
+router.get('/detail/:id', usuariosController.detail); 
+
+/*** EDIT ONE PRODUCT ***/ 
+router.get('/edit/:id', usuariosController.edit); 
+router.patch('/edit/:id', upload.any(),usuariosController.update); 
+
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', usuariosController.destroy); 
 
 
 module.exports = router;
