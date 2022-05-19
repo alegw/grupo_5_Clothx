@@ -31,7 +31,7 @@ router.get('/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.edit); 
-router.patch('/:id/edit', upload.any(),productsController.update); 
+//router.patch('/:id/edit', upload.any(),productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

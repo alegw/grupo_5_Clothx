@@ -1,18 +1,53 @@
-«<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet" type="text/css" href="/css/stylesDetail.css" />
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Todos los productos'}) %>
-<body>
-	<!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
+<%- include('partials/head', {title: 'Todos los productos' }) %>
 
-	<!-- todos los productos -->
-<DIV><h1> ACA TE DEBERIA LISTAR TODOS LOS PRODUCTOS</h1></DIV>
-	<!-- /todos los productos -->
+	<body>
+		<!-- Header -->
+		<%- include('partials/header') %>
+			<!-- /Header -->
 
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
-</body>	
+			<!-- todos los productos -->
+
+			<div>
+				<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="products-title">Todos los productos</h2>
+					</div>
+
+					<% products.forEach(function(product){ let finalPrice=(product.price * ((100 - product.discount) /
+						100)).toFixed(0) %>
+						<div class="col-12 col-sm-6 col-lg-3">
+							<section class="product-box">
+								<a href="/products/<%= product.id %>">
+									<figure class="product-box_image">
+										<img src="/img/productos/<%= product.image %>" alt="imagen de producto" style="max-width: 25%";>
+									</figure>
+									<article class="product-box_data">
+										<div>
+											<%= product.name %>
+											<br>
+											<div> $ <%= product.price %></div>	
+										</div>
+
+									</article>
+								</a>
+							</section>
+						</div>
+						<% }) %>
+
+				</div>
+			</div>
+
+
+			<!-- /todos los productos -->
+
+			<!-- footer -->
+			<%- include('partials/footer') %>
+				<!-- /footer -->
+	</body>
+
 </html>
