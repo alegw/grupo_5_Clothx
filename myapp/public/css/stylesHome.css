@@ -58,19 +58,11 @@ body{
    border-radius: 30%;
    text-align: center;
 }
-
-.categorias article img{
-   display: inline-flex;
-   padding: 3%;
-   border-radius: 30%;
+.categorias{
+   box-sizing:content-box ;
+   display: flex;
+   justify-content: space-between;
 }
-.categorias article {
-   display: inline-flex;
-   width: 25%;
-   padding: 3%;
-   border-radius: 30%;
-}
-
 .titulo{
    padding-top: 3%;
    padding-bottom: 3%;
