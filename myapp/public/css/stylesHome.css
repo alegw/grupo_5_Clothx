@@ -74,11 +74,19 @@ body{
 .titulo{
    padding-top: 3%;
    padding-bottom: 3%;
-   font-family: 'Josefin Sans', sans-serif;
+   font-family: 'Novecento', bold;
    text-align: center;
    color: #0F80A4;
 }
-@media (min-width: 460px){
+.tipo-texto{
+   padding-left: 4%;
+   padding-right: 4%;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   font-family: 'Roboto', medium;
+   color: #242424;
+}
+@media (min-width: 320px){
    /* Mobile*/
    .slider{
       width: 100%;
@@ -110,11 +118,34 @@ body{
       justify-content: center;
    }
 }
-@media (min-width: 768px){
+@media (min-width: 600px){
    /* Tablet*/
    .slider{
       width: 100%;
       height: 90%;
       overflow: hidden;
+   }
+   .novedades{
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+   }
+   .novedades article{
+      display: flex;
+      width: 20%; 
+   }
+}
+@media (min-width: 1200px){
+   /* PC */
+   .novedades{
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+   }
+   .novedades article{
+      display: flex;
+      width: 10%; 
    }
 }
