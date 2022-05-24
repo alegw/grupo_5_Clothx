@@ -1,3 +1,8 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
 .banner{
     background-attachment: fixed;
     background-size: cover;
@@ -8,90 +13,37 @@ body{
     background-color: whitesmoke;
 }
 
-
-#slider{
- background-color: white;
- max-width: 100%;
+/*------------------------SLIDER-------------------------------*/
+.slider{
  width: 100%;
- box-sizing: border-box;
+ height: 800px;
+ overflow: hidden;
 }
 
-#slider > ul, li {
-   padding: 0;
-   margin: 0;
+.slider ul{
+   display: flex;
+   animation: cambio 15s infinite alternate linear;
+   width: 300%;
+}
+
+.slider li{
+   width: 100%;
    list-style: none;
 }
 
-#slider > ul.slider{
- position: relative;
- width: 100%;
- height: 300px;
+.slider img{
+   width: 100%;
+   height: 100%;
 }
-
-#slider > ul.slider li {
-   position: absolute;
-   left: 0px;
-   top: 0px;
-   opacity: 0;
-   width: inherit;
-   height: inherit;
-   transition: opacity .7s;
-   background:#fff;
+@keyframes cambio{
+   0%{margin-left: 0;}
+   20%{margin-left: 0;}
+   40%{margin-left: -100%;}
+   60%{margin-left: -100%;}
+   90%{margin-left: -200%;}
+   100%{margin-left: -200%;}
 }
-
-#slider > ul.slider li img{
- width: 100%;
- position: absolute;
-}
-
-#slider > ul.slider li:first-child {
-   opacity: 1; /*Mostramos el primer <li>*/
-}
-
-#slider > ul.slider li:target {
-   opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-}
-
-#slider > .menu{
- text-align: center;
- margin: 0px;
-}
-
-#slider > .menu li{
- display: inline-block;
- text-align: center;
-}
-
-#slider > .menu li a{
- display: inline-block;
- background-color: rgb(211, 211, 211);
- padding: 10px;
- width: 7%;
- height: 6%;
- bottom: 6%;
- border-radius: 100%;
- position: relative;
- margin-top: 200%;
- margin-bottom: 20%;
- z-index: 1;
-}
-
-.container{
-   position: relative;
-   z-index:1;
-   width: 40%;
-   background-color: rgba(255,255,255,0.3);
-   backdrop-filter: blur(4px);
-   margin: 3%;
-   margin-top: 6%;
-   padding: 2%;
-   border-radius: 15px;
-
-}
-.text{
-   position: relative;
-   z-index:1;
-}
+/*-------------------------SLIDER-----------------------------*/
 .novedades article{
    box-sizing:content-box ;
    display: inline-flex;
@@ -120,13 +72,19 @@ body{
 }
 
 .titulo{
+   padding-top: 3%;
+   padding-bottom: 3%;
    font-family: 'Josefin Sans', sans-serif;
    text-align: center;
    color: #0F80A4;
 }
-@media (max-width: 460px){
+@media (min-width: 460px){
    /* Mobile*/
- 
+   .slider{
+      width: 100%;
+      height: 90%;
+      overflow: hidden;
+   }
    .novedades{
       display: inline-flex;
       flex-wrap: wrap;
@@ -154,4 +112,9 @@ body{
 }
 @media (min-width: 768px){
    /* Tablet*/
+   .slider{
+      width: 100%;
+      height: 90%;
+      overflow: hidden;
+   }
 }
