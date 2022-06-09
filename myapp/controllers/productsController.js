@@ -15,6 +15,17 @@ const controller = {
 		})
 	},
 
+	// Filtrado por Categoria
+	category: (req, res) => {
+		let category = req.params.category
+		let product = products.find(product => product.category == category)
+		res.render('category', {
+			category,
+			products,
+			toThousand
+		})
+	},
+
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		let id = req.params.id
@@ -42,11 +53,14 @@ const controller = {
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			image: image
+			image: image,
+			
 		};
+		
 		products.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
+		 
 	},
 
 	// Update - Form to edit
@@ -55,7 +69,8 @@ const controller = {
 		let productToEdit = products.find(product => product.id == id)
 		res.render('product-edit-form', {productToEdit})
 	},
-	// Update - Method to update
+	
+
 	update: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)

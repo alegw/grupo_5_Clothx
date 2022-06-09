@@ -1,9 +1,14 @@
+body{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .top-header{
     display: flex;
     position: relative;
     justify-content: space-between;
     padding: 5px;
-    margin: 5px;
+    /* margin: 5px; */
+    background-color: gainsboro;
  
  }
  .imagen-header-logo{
@@ -16,13 +21,13 @@
  
  .lupita{
     color: black;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 15px;
     display: inline;
     position: absolute;
     left: 40%;
-    width: 200px;
-    margin-top: 0.5%;
+    width: auto;
+    margin-top: 0.1%;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
@@ -60,7 +65,7 @@
         position: relative;
         justify-content: space-between;
         padding: 10px;
-        margin: 10px;
+        /* margin: 10px; */
     };
     .imagen-logo{
         width: 30%;
@@ -73,7 +78,7 @@
         position: relative;
         justify-content: space-between;
         padding: 5px;
-        margin: 5px;
+        /* margin: 5px; */
     };
     .imagen-logo{
         width: 8%;
@@ -86,9 +91,26 @@
         position: relative;
         justify-content: space-between;
         padding: 5px;
-        margin: 5px;
+        /* margin: 5px; */
     };
     .imagen-logo{
         width: 1.5%;
      }
+ }
+
+
+ .search-form_input{
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+ }
+
+ .search-form_button{
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background-color:rgb(255, 255, 255);
+
  }

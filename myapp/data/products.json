@@ -1,222 +1,226 @@
 [
-  {
-    "id": 1,
-    "name": "Pollera Lisa Fuxia",
-    "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Fuxia",
-    "image": "Ropa1-1.jpg",
-    "category": "Pollera",
-    "colors": "Fuxia",
-    "price": 9999.99,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 2,
-    "name": "Pollera Lisa Celeste",
-    "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Celeste",
-    "image": "Ropa1-2.jpg",
-    "category": "Pollera",
-    "colors": "Celeste",
-    "price": 9999.99,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 3,
-    "name": "Pollera Lisa Violeta",
-    "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Violeta",
-    "image": "Ropa1-3.jpg",
-    "category": "Pollera",
-    "colors": "Violeta",
-    "price": 9999.99,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 4,
-    "name": "Pollera Lisa Marron",
-    "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Marron",
-    "image": "Ropa1-4.jpg",
-    "category": "Pollera",
-    "colors": "Marron",
-    "price": 9999.99,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 5,
-    "name": "Pollera Lisa Mostaza",
-    "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Mostaza",
-    "image": "Ropa1-5.jpg",
-    "category": "Pollera",
-    "colors": "Mostaza",
-    "price": 9999.99,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 6,
-    "name": "Short Liso Fuxia",
-    "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Fuxia",
-    "image": "Ropa2-1.jpg",
-    "category": "Short",
-    "colors": "Fuxia",
-    "price": 7000.00,
-    "size": "M",
-    "gender": "Male"
-  },
-  {
-    "id": 7,
-    "name": "Short Liso Mostaza",
-    "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Mostaza",
-    "image": "Ropa2-2.jpg",
-    "category": "Short",
-    "colors": "Mostaza",
-    "price": 7000.00,
-    "size": "M",
-    "gender": "Male"
-  },
-  {
-    "id": 8,
-    "name": "Short Liso Azul",
-    "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Azul",
-    "image": "Ropa2-3.jpg",
-    "category": "Short",
-    "colors": "Azul",
-    "price": 7000.00,
-    "size": "M",
-    "gender": "Male"
-  },
-  {
-    "id": 9,
-    "name": "Short Liso Marron",
-    "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Marron",
-    "image": "Ropa2-4.jpg",
-    "category": "Short",
-    "colors": "Marron",
-    "price": 7000.00,
-    "size": "M",
-    "gender": "Male"
-  },
-  {
-    "id": 10,
-    "name": "Short Liso Verde",
-    "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Verde",
-    "image": "Ropa2-5.jpg",
-    "category": "Short",
-    "colors": "Verde",
-    "price": 7000.00,
-    "size": "M",
-    "gender": "Male"
-  },
-  {
-    "id": 11,
-    "name": "Camisa Lisa Amarilla",
-    "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Amarilla",
-    "image": "Ropa3-1.jpg",
-    "category": "Camisa",
-    "colors": "Amarilla",
-    "price": 12000.00,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 12,
-    "name": "Camisa Lisa Celeste",
-    "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Celeste",
-    "image": "Ropa3-2.jpg",
-    "category": "Camisa",
-    "colors": "Celeste",
-    "price": 12000.00,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 13,
-    "name": "Camisa Lisa Rosa",
-    "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Rosa",
-    "image": "Ropa3-3.jpg",
-    "category": "Camisa",
-    "colors": "Rosa",
-    "price": 12000.00,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 14,
-    "name": "Camisa Lisa Naranja",
-    "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Naranja",
-    "image": "Ropa3-4.jpg",
-    "category": "Camisa",
-    "colors": "Naranja",
-    "price": 12000.00,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 15,
-    "name": "Sweater de vestir Azul",
-    "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Azul",
-    "image": "Ropa4-1.jpg",
-    "category": "Sweater",
-    "colors": "Azul",
-    "price": 14999.99,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 16,
-    "name": "Sweater de vestir Verde",
-    "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Verde",
-    "image": "Ropa4-2.jpg",
-    "category": "Sweater",
-    "colors": "Verde",
-    "price": 14999.99,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 17,
-    "name": "Sweater de vestir Violeta",
-    "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Violeta",
-    "image": "Ropa4-3.jpg",
-    "category": "Sweater",
-    "colors": "Violeta",
-    "price": 14999.99,
-    "size": "XL",
-    "gender": "Male"
-  },
-  {
-    "id": 18,
-    "name": "Sombrero de fiesta Crudo",
-    "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Crudo",
-    "image": "Ropa5-1.jpg",
-    "category": "Sombrero",
-    "colors": "Crudo",
-    "price": 6000.00,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 19,
-    "name": "Sombrero de fiesta Azul",
-    "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Azul",
-    "image": "Ropa5-2.jpg",
-    "category": "Sombrero",
-    "colors": "Azul",
-    "price": 6000.00,
-    "size": "S",
-    "gender": "Female"
-  },
-  {
-    "id": 20,
-    "name": "Sombrero de fiesta Marron",
-    "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Marron",
-    "image": "Ropa5-3.jpg",
-    "category": "Sombrero",
-    "colors": "Marron",
-    "price": 6000.00,
-    "size": "S",
-    "gender": "Female"
-  }
+ {
+  "id": 1,
+  "name": "Pollera Lisa Fuxia",
+  "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Fuxia",
+  "image": "Ropa1-1.jpg",
+  "category": "Pollera",
+  "colors": "Fuxia",
+  "price": 9999.99,
+  "size": "S",
+  "gender": "Female"
+ },
+ {
+  "id": 2,
+  "name": "Pollera Lisa AZUL",
+  "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Celeste",
+  "category": "Pollera",
+  "price": "3000.99",
+  "image": "Ropa1-2.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Pollera Lisa Violeta",
+  "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Violeta",
+  "category": "Pollera",
+  "price": "500.99",
+  "image": "Ropa1-3.jpg",
+  "destacado": true
+ },
+ {
+  "id": 4,
+  "name": "Pollera Lisa Marron",
+  "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Marron",
+  "image": "Ropa1-4.jpg",
+  "category": "Pollera",
+  "colors": "Marron",
+  "price": 9999.99,
+  "size": "S",
+  "gender": "Female",
+  "destacado": true
+ },
+ {
+  "id": 5,
+  "name": "Pollera Lisa Mostaza",
+  "description": "Pollera es el término con que se designa a la falda externa del vestido en Hispanoamérica, donde es usado como parte de atuendos folclóricos en varios países. En este caso es de color Mostaza",
+  "image": "Ropa1-5.jpg",
+  "category": "Pollera",
+  "colors": "Mostaza",
+  "price": 9999.99,
+  "size": "S",
+  "gender": "Female",
+  "destacado": true
+ },
+ {
+  "id": 7,
+  "name": "Short Liso Mostaza",
+  "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Mostaza",
+  "category": "",
+  "price": "7000",
+  "image": "Ropa2-2.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Short Liso Marron",
+  "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Marron",
+  "image": "Ropa2-4.jpg",
+  "category": "Pantalon",
+  "colors": "Marron",
+  "price": 7000,
+  "size": "M",
+  "gender": "Male"
+ },
+ {
+  "id": 10,
+  "name": "Short Liso Verde",
+  "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Verde",
+  "category": "",
+  "price": "5000",
+  "image": "Ropa2-5.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Camisasdsdsd",
+  "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Amarilla",
+  "category": "",
+  "price": "9000",
+  "destacado": "on",
+  "image": "Ropa3-1.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Camisa Lisa Celeste",
+  "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Celeste",
+  "image": "Ropa3-2.jpg",
+  "category": "Camisa",
+  "colors": "Celeste",
+  "price": 12000,
+  "size": "XL",
+  "gender": "Male"
+ },
+ {
+  "id": 13,
+  "name": "Camisa Lisa Rosa",
+  "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Rosa",
+  "image": "Ropa3-3.jpg",
+  "category": "Camisa",
+  "colors": "Rosa",
+  "price": 12000,
+  "size": "XL",
+  "gender": "Male"
+ },
+ {
+  "id": 14,
+  "name": "Camisa Lisa Naranja",
+  "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Naranja",
+  "image": "Ropa3-4.jpg",
+  "category": "Camisa",
+  "colors": "Naranja",
+  "price": 12000,
+  "size": "XL",
+  "gender": "Male"
+ },
+ {
+  "id": 15,
+  "name": "Pullover",
+  "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Azul",
+  "category": "sweater",
+  "price": "12000",
+  "destacado": "on",
+  "image": "imageProduct-1654125756464.png"
+ },
+ {
+  "id": 16,
+  "name": "Sweater de vestir Verde",
+  "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Verde",
+  "image": "Ropa4-2.jpg",
+  "category": "Sweater",
+  "colors": "Verde",
+  "price": 14999.99,
+  "size": "XL",
+  "gender": "Male"
+ },
+ {
+  "id": 17,
+  "name": "Sweater de vestir Violeta",
+  "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Violeta",
+  "image": "Ropa4-3.jpg",
+  "category": "Sweater",
+  "colors": "Violeta",
+  "price": 14999.99,
+  "size": "XL",
+  "gender": "Male"
+ },
+ {
+  "id": 18,
+  "name": "camisani",
+  "description": "tapado",
+  "categoria": "",
+  "precioProduct": "",
+  "image": "Ropa5-1.jpg"
+ },
+ {
+  "id": 19,
+  "name": "Sombrero de fiesta Azul",
+  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Azul",
+  "image": "Ropa5-2.jpg",
+  "category": "Sombrero",
+  "colors": "Azul",
+  "price": 6000,
+  "size": "S",
+  "gender": "Female"
+ },
+ {
+  "id": 20,
+  "name": "Sombrero de fiesta Marron",
+  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Marron",
+  "image": "Ropa5-3.jpg",
+  "category": "Sombrero",
+  "colors": "Marron",
+  "price": 6000,
+  "size": "S",
+  "gender": "Female"
+ },
+ {
+  "id": 21,
+  "name": "Remerita",
+  "description": "remerita nueva",
+  "category": "remera",
+  "price": "1500",
+  "destacado": "on",
+  "image": "imageProduct-1654125559865.png"
+ },
+ {
+  "id": 22,
+  "name": "Gorro de lana",
+  "description": "calentito para el invierno",
+  "category": "accesorios",
+  "price": "1999",
+  "image": "imageProduct-1654744288147.png"
+ },
+ {
+  "id": 23,
+  "name": "Bufanda",
+  "description": "2 vueltas de cuello",
+  "category": "accesorios",
+  "price": "1500",
+  "image": "imageProduct-1654125709996.png"
+ },
+ {
+  "id": 24,
+  "name": "Sombrero Blanco",
+  "description": "Excelente",
+  "category": "accesorios",
+  "price": "2000",
+  "image": "image-1654744759590.jpg"
+ },
+ {
+  "id": 25,
+  "name": "nuevo destacado",
+  "description": "dsdsd",
+  "category": "accesorios",
+  "price": "5",
+  "destacado": "on",
+  "image": "image-1654772073637.jpg"
+ }
 ]

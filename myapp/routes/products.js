@@ -29,13 +29,20 @@ router.post('/', upload.any(), productsController.store);
 /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.detail); 
 
+/*** POR CATEGORIA ***/ 
+router.get('/category/:category', productsController.category); 
+
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', productsController.edit); 
-//router.patch('/:id/edit', upload.any(),productsController.update); 
+router.get('/edit/:id', productsController.edit); 
+router.patch('/edit/:id', upload.any(),productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productsController.destroy); 
+
+
+ 
+
 
 
 module.exports = router;

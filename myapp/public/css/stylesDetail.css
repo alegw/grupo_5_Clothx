@@ -5,7 +5,7 @@ body {
 .main1 {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; 
     width: 100%;
     padding: 2%;
 }
@@ -48,7 +48,7 @@ footer {
 
 .titulos {
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
+    /* text-align: center; */
     color: #0F80A4;
 }
 
@@ -146,6 +146,7 @@ footer {
     overflow: hidden;
     transition: 300ms;
     margin: 20px 0;
+    text-align: center;
   }
   .product-box a {
     display: block;

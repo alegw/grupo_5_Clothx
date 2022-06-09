@@ -10,32 +10,74 @@
 
   <%- include("./partials/header") %>
 
-  <!-- Slider -->
+  <img class="Banner" src="/img/Banner.jpg" width="100%">
 
-    <div class="slider">
-        <ul>
-          <li>
-            <img src="/img/Portada1.jpg">
-          </li>
-          <li>
-            <img src="/img/Portada2.jpg">
-          </li>
-          <li>
-            <img src="/img/Portada3.jpg">
-          </li>
-        </ul>       
-      </div>
+  
 
 <!-- Banner -->
 
-      <img class="Banner" src="/img/Banner.jpg" width="100%">
+
 
 <!-- Main -->
 
       <main>
 
-        <h2 class="titulo">Novedades</h2>
-        <section class="novedades">
+
+
+
+
+
+
+
+
+
+
+			<div>
+				<div class="container products-wrapper">
+			 
+				 
+
+          <div>
+            <h2 class="titulo">Destacados de la semana</h2>
+            <div class="container products-wrapper">
+            <div class="row">
+              
+
+              <div class="col-12">
+               </div>
+    
+              <% products.forEach(function(product){ 
+
+                if (product.destacado == "on") {
+                 %>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <section class="product-box">
+                    <a href="/products/<%= product.id %>">
+                      <figure class="product-box_image">
+                        <img src="/img/products/<%= product.image %>" alt="imagen de producto" style="max-width: 100%";>
+                      </figure>
+                      <article class="product-box_data">
+                        <div>
+                          <div class="nombreProd"><%= product.name %></div>
+                          <br>
+                          <div class="precioProd"> $ <%= product.price %></div>	
+                        </div>
+    
+                      </article>
+                    </a>
+                  </section>
+                </div>
+                <% }}) %>
+    
+            </div>
+          </div>
+    
+
+
+
+
+
+        <!-- <section class="novedades">
             
 
             <article class="articulo">
@@ -58,56 +100,75 @@
               <a href="/products/18"><img style="max-width: 100%;" src="/img/Productos/Ropa5-1.jpg" alt=""></a>
             </article>
 
+        </section> -->
+
+
+       
+
+
+        <h2 class="titulo"> Ver Productos por Categoría</h2>
+        <section class="col-12">
+          
+          <article class="categorias-main">
+
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/Pollera"> <img src="/img/category/polleras.png" alt=""> <h6>Polleras</h6></a></div>
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/Pantalon"> <img src="/img/category/pantalon.png" alt=""> <h6>Pantalones</h6></a></div>
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/remera"> <img src="/img/category/remeras.png" alt=""> <h6>Remeras</h6></a></div>
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/Camisa"> <img src="/img/category/camisas.png" alt=""> <h6>Camisas</h6></a> </div>
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/sweater"> <img src="/img/category/sweater.png" alt=""><h6>Sweaters</h6></a> </div>
+            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/accesorios"> <img src="/img/category/accesorios.png" alt=""> <h6>Accesorios</h6></a></div>
+
+          
+          </article>
+          
+
         </section>
-
-
-        <h2 class="titulo">Categorías</h2>
-        <section class="categorias">
+        <br><br>
+        <section class="col-12 caja-vermas">
           
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 1.png" alt=""></a>
-          </article>
+          <h2 class="botonuno"> <a href="/products" style="color: white;">  Ver todos los productos </a></h2>
           
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 2.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 3.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 4.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 5.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 6.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 7.png" alt=""></a>
-          </article>
-
-          <article>
-            <a href="/"><img src="/img/Categorías/Mesa de trabajo 8.png" alt=""></a>
-          </article>
-
         </section>
 
     </main>
+
+    <br><br><br>
 
 <!-- Banner inferiror -->
 
     <img class="Banner-inferior" src="/img/Banner inferior.jpg" width="100%">
 
-    <section>
-      <h2 class="titulo">Historia</h2>
-      <p class="tipo-texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, rem, saepe id adipisci laudantium ut dolore corporis explicabo voluptas fugit expedita quos consequatur debitis nemo magnam labore, amet doloremque nisi?</p>
-    </section>
+ 
+<!-- Slider -->
+
+<div class="somos">
+  <div class="col-lg-6">
+      <div class="slider ">
+        <ul>
+          <li>
+            <img src="/img/p1.jpg">
+          </li>
+          <li>
+            <img src="/img/p2.jpg">
+          </li>
+          <li>
+            <img src="/img/p3.jpg">
+          </li>
+        </ul>      
+      </div>
+  </div>
+    
+  <div class="col-lg-6">
+    <div class="tipo-texto">Somos una empresa dedicada a la venta online de indumentaria para todos los públicos. Cada persona es única y nos encanta que su ropa lo sea también, por eso es que seleccionamos cada prenda pensando en nuestros posibles clientes. </div>
+  </div>
+</div>
+
+
+
+ 
+
+
+   
 
 <!-- footer -->
 
@@ -115,3 +176,5 @@
 
 </body>
 </html>
+
+ 

@@ -15,7 +15,7 @@
 				<div class="container products-wrapper">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="products-title">Todos los productos</h2>
+						<h2 class="products-title"> </h2>
 					</div>
 
 					<% products.forEach(function(product){ let finalPrice=(product.price * ((100 - product.discount) /
@@ -24,15 +24,15 @@
 							<section class="product-box">
 								<a href="/products/<%= product.id %>">
 									<figure class="product-box_image">
-										<img src="/img/productos/<%= product.image %>" alt="imagen de producto" style="max-width: 25%";>
+										<img src="/img/products/<%= product.image %>" alt="imagen de producto" style="max-width: 100%";>
 									</figure>
 									<article class="product-box_data">
 										<div>
-											<%= product.name %>
+											 <%= product.name %> 
 											<br>
 											<div> $ <%= product.price %></div>	
 										</div>
-
+					
 									</article>
 								</a>
 							</section>

@@ -4,7 +4,7 @@
   <%- include("./partials/head") %>
   <body>
     <%- include("./partials/header") %>
-    <form>
+    <form action="/products" method="POST"  enctype="multipart/form-data">
 
     <main></main>
     <div class="caja-form">
@@ -12,19 +12,20 @@
 
       <div class="campos">
         <label for="nombreProduct" class="smallHeader"> Nombre de producto</label>
-        <input type="text" name="nombreProduct" id="" />
+        <input type="text" name="name" id="" />
       </div>
       <div class="campos">
         <label for="description" class="smallHeader"> Descripcion de producto</label>
         <input type="text" name="description" id="" />
       </div>
-      <div class="campos">
+
+       <div class="campos">
         <label for="imageProduct" class="smallHeader">Imagen del producto</label
-        ><input type="file" name="imageProduct" accept="jpg, jpeg" multiple />
-      </div>
+        ><input type="file" name="image" id="image" class="form-input">
+      </div> 
       <div class="campos">
         <label for="categoryProduct" class="smallHeader">Categoria del producto</label
-        ><select name="categoria" id="">
+        ><select name="category" id="">
           <option value="pollera">Pollera</option>
           <option value="pantalon">Pantalon</option>
           <option value="camisa">Camisa</option>
@@ -33,7 +34,7 @@
           <option value="accesorios">Accesorios</option>
         </select>
       </div>
-      <div class="campos">
+      <!-- <div class="campos">
         <label for="" class="smallHeader">Seleccionar talles disponibles</label>
         <input type="checkbox" name="talleS" /><label for="talleS"
           >Talle S</label
@@ -62,11 +63,18 @@
         <input type="checkbox" name="colorWhite" /><label for="colorWhite"
           >Blanco</label
         >
-      </div>
+      </div> -->
       <div class="campos">
         <label for="precioProduct" class="smallHeader"> Precio del producto</label>
-        <input type="number" name="precioProduct" id="" min="1" step="any" />
+        <input type="number" name="price" id="" min="1" step="any" />
       </div>
+
+      <div class="campos">
+        <label for="description" class="smallHeader"> Producto destacado</label>
+        <input type="checkbox" name="destacado" id="" />
+      </div>
+
+      
       <div class="campos">
         <input class="crear" type="submit" value="Crear"> 
     </div>

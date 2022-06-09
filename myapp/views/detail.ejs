@@ -14,21 +14,27 @@
     <hr>
     <main>
         <div class="main1">
-            <div class="box1-2">
-                <div class="box1">
-                    <div><img style="max-width: 100%;" src="/img/Productos/<%= product.image %>" alt="product image"></div>
+             
+                <div class="col-12 col-lg-6">
+                    <div><img style="max-width: 100%;" src="/img/products/<%= product.image %>" alt="product image"></div>
                 </div>
-            </div>
-            <div class="box3">
+             
+            <div class="col-12 col-lg-3">
                 <div class="titulos">
                     <h2><%= product.name %></h2>
+                    <br>
                 </div>
                 <section>
                     <h4>Informacion de producto</h4>
                     <div><%= product.description %></div>
+                    <br>
+
+                    <h4>Categoría</h6>
+                    <div><%= product.category %></div>
+
                 </section>
-                <div><h4> Variante Color: </h4></div>
-                <div> <%=product.colors%></div>
+              <!--  <div><h4> Variante Color: </h4></div>
+                <div> <%=product.colors%></div> -->
                 <!-- <section><label for="Variantes">
                         <h4>Variantes</h4>
                     </label>
@@ -40,19 +46,20 @@
                         <option value="Marron">Marron</option>
                     </select> -->
                 </section>
-                <section><label for="Talles">
+               <!--<section><label for="Talles">
                         <h4>Talles</h4>
                     </label>
                     <input type="radio" id="s" value="s">S
                     <input type="radio" id="m" value="m">M
                     <input type="radio" id="l" value="l">L
                     <input type="radio" id="xl" value="xl">XL
-                </section>
+                </section> --> 
+                <br>
                 <div class="titulo2">
-                    <h4>PRECIO</h4>
+                    <h4>Precio</h4>
                     <div class="precio"><%= product.price %></div>
                 </div>
-                <ul class="actions-list">
+                <!-- <ul class="actions-list">
                     <li>
                         <i class="fas fa-credit-card"></i>
                         <p> Pagá en 12 cuotas sin interes</p>
@@ -61,11 +68,24 @@
                         <i class="fas fa-store"></i>
                         <p> Retiro gratis en locales del vendedor</p>
                     </li>
-                </ul>
-                <br>
+                </ul> -->
+                <br> <br><br><br>
+                <button><a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a></button>
 
-                <div class="boton" style="text-align:center"><button>AGREGAR A CARRITO</button></div>
+                <br><br><br>
+
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+
+                <br>
+                <!-- <div class="boton" style="text-align:center"><button>AGREGAR A CARRITO</button></div> -->
+           
+           
             </div>
+
+
+
 
         </div>
         <h2 class="titulos">Productos relacionados</h2>

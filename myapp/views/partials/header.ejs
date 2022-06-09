@@ -3,9 +3,20 @@
         <div class="imagen-header-logo">
             <a href="/"><img class="imagen-logo" src="/img/Logo.png" alt=""  /></a>
         </div>
-        <form action="POST">
-            <div class="lupita"><input class="campo" type="text" placeholder="Buscar productos, marcas"><i
-                    class="fas fa-search"></i></div>
+
+
+        <!-- <form action="POST">
+            <div class="lupita">
+                <input class="campo" type="text" placeholder="Buscar productos, marcas"><i
+                    class="fas fa-search"></i>
+                </div>
+        </form> -->
+
+        <form action="/search" method="GET" class="search-form">
+            <div class="lupita">
+            <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+            <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+        </div>
         </form>
 
         <div class="botones">
