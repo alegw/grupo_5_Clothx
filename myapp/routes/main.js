@@ -21,6 +21,10 @@ router.get("/productCart", function (req, res, next) {
     res.render("reestablecer", { title: "Express" });
   });
 
+  router.get("/users/user", function (req, res, next) {
+    res.render("user", { title: "Express" });
+});
+
 
 
 module.exports = router;

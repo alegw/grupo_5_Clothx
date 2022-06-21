@@ -1,4 +1,4 @@
-NO DEBERIAMOS USAR ESTE ARCHIVO, SE REEMPLAZA POR /main.js
+/*NO DEBERIAMOS USAR ESTE ARCHIVO, SE REEMPLAZA POR /main.js */
 
 /* var express = require("express");
 var router = express.Router(); */
