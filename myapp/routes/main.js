@@ -24,6 +24,9 @@ router.get("/productCart", function (req, res, next) {
   router.get("/users/user", function (req, res, next) {
     res.render("user", { title: "Express" });
 });
+router.get("/tyc", function (req, res, next) {
+  res.render("tyc", { title: "Express" });
+});
 
 
 

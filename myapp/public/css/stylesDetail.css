@@ -155,3 +155,14 @@ footer {
   .product-box_image {
     border-bottom: 1px solid var(--light-gray);
   }
+
+  .textojustificado{
+    font-size: 20px;
+    line-height: 1.6;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Roboto', medium;
+    color: black
+  }
