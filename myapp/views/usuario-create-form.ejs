@@ -1,24 +1,33 @@
-«
-<!DOCTYPE html>
-<html lang="es">
-<!-- Include Head -->
-<%- include('partials/head', {title: 'Todos los productos' }) %>
+<!DOCTYPE html><!-- EN USO-->
+<html lang="en">
+<link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<%- include("./partials/head") %>
 
 	<body>
-		<!-- Header -->
-		<%- include('partials/header') %>
-			<!-- /Header -->
+		<%- include("./partials/header") %>
+			<form action="/products" method="POST" enctype="multipart/form-data">
 
-			<!-- todos los productos -->
-			<DIV>
-				<form>
-					<h1> FORMULARIO DE CREACION DE USUARIOS</h1>
-			</DIV>
-			<!-- /todos los productos -->
+				<main></main>
+				<div class="caja-form">
+					<h2 class="titulo">¡Te damos la bienvenida a Clothx!</h2>
+					<h3>Creá tu cuenta!</h3>
+
+					<div class="campos">
+						<input type="text" name="name" id="" placeholder="Nombre*" />
+						<input type="text" name="name" id="" placeholder="Apellido*" />
+						<input type="text" name="name" id="" placeholder="E-mail*" />
+						<input type="text" name="name" id="" placeholder="Contraseña*" />
+						<input type="text" name="name" id="" placeholder="Repetir contraseña*" />
+					</div>
+					<br>
+					<p class="">Al presionar Crear aceptás los <a href='/tyc'>Términos y Condiciones</a>.</p>
+
+					<div class="campos">
+						<input class="crear" type="submit" value="Crear">
+					</div>
+				</div>
 			</form>
-			<!-- footer -->
-			<%- include('partials/footer') %>
-				<!-- /footer -->
+			<%- include("./partials/footer") %>
 	</body>
 
 </html>

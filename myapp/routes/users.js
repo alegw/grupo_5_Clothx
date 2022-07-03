@@ -21,14 +21,20 @@ var upload = multer({storage: configuracion})
 /*** GET ALL usuarios ***/ 
 router.get('/', usuariosController.index); 
 
+/*** Login usuarios ***/ 
+router.get('/login', usuariosController.login); 
+
+/*** Reestablecer contraseña usuario ***/ 
+router.get('/reestablecer', usuariosController.reestablecer); 
+
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', usuariosController.create); 
 
 router.post('/', [ upload.any() ] , usuariosController.store); 
 
 
-/*** GET ONE PRODUCT ***/ 
-router.get('/detail/:id', usuariosController.detail); 
+/*** GET ONE USER ***/ /* 
+router.get('/detail/:id', usuariosController.detail);  */
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', usuariosController.edit); 

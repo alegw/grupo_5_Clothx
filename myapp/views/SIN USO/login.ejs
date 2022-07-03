@@ -1,0 +1,64 @@
+<!-- SE REEMPLAZA POR USERLOGIN.EJS -->
+  
+  <!DOCTYPE html>
+<html lang="en">
+
+  <%- include("./partials/head") %>
+
+<body>
+<!-- Header -->
+
+  <%- include("./partials/header") %>
+
+     <div class="caja-form">
+
+    <h2 class="titulo">¡Hola! <br> Ingresá tu usuario y contraseña</h2>
+     
+
+    
+    <form class="formulario" action="/registro" method="POST">
+
+
+        <div class="campos">
+             <label for="nombre"> Usuario</label>
+             <input type="text" name="user" id="">
+         </div>
+       
+        
+         <div class="campos">
+            <label for="nombre"> Contraseña</label>
+            <input type="password" name="pass" id="">
+        </div>
+      
+       
+        <div class="campos">
+            <input class="enviar" type="submit"> 
+        </div>
+       
+       
+       
+       
+
+
+
+
+
+    </form>
+    <div class="olvide-y-crear">
+        <a href="/reestablecer"><p class="letra-olvide">Olvide mi contraseña</p></a>
+        <a href="/register"><p class="letra-olvide der">Crear cuenta</p></a>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- footer -->
+    
+  <%- include("./partials/footer") %>
+
+    
+</body>
+</html>

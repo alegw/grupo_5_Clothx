@@ -52,6 +52,14 @@
   "destacado": true
  },
  {
+  "id": 6,
+  "name": "Short Liso Fuxia",
+  "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Fuxia",
+  "category": "",
+  "price": "7000",
+  "image": "Ropa2-1.jpg"
+ },
+ {
   "id": 7,
   "name": "Short Liso Mostaza",
   "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Mostaza",
@@ -181,15 +189,6 @@
   "gender": "Female"
  },
  {
-  "id": 21,
-  "name": "Remerita",
-  "description": "remerita nueva",
-  "category": "remera",
-  "price": "1500",
-  "destacado": "on",
-  "image": "imageProduct-1654125559865.png"
- },
- {
   "id": 22,
   "name": "Gorro de lana",
   "description": "calentito para el invierno",
@@ -221,5 +220,16 @@
   "price": "5",
   "destacado": "on",
   "image": "image-1654772073637.jpg"
+ },
+ {
+  "id": 26,
+  "name": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "image": "default-image.png"
  }
 ]
