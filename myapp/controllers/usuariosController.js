@@ -12,10 +12,11 @@ const controller = {
 		res.render('usuarios', { usuarios })
 	},
 
-/* 	detail: (req, res) => {
+ 	detail: (req, res) => {
 		let id = req.params.id
 		let user = usuarios.find(user => user.id == id)
-		res.render('usuarioDetail', { user })} */
+		res.render('usuarioDetail', { user }) 
+	},
 	
 	// Login de usuarios
 	login: (req, res) => {
@@ -33,13 +34,13 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-		let image
+		let image	
+		console.log(req.files);
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename
 		} else {
-			image = 'default-image.png'
+			image = 'default.jpg'
 		}
-
 		let nuevoUsuario = {
 			id: usuarios[usuarios.length - 1].id + 1,
 			...req.body,

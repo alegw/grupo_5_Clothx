@@ -1,44 +1,49 @@
 <!DOCTYPE html> <!-- EN USO-->
 <html lang="en">
- <link rel="stylesheet" type="text/css" href="/css/stylesDetail.css" />
-  <!-- Head -->
+<link rel="stylesheet" type="text/css" href="/css/stylesDetail.css" />
+<!-- Head -->
 
-  <%- include("./partials/head") %>
+<%- include("./partials/head") %>
 
-  <!-- Head -->
-<body>
-  <!-- Header -->
- 
-  <%- include("./partials/header") %>
-  
-    <hr>
-    <main>
+    <!-- Head -->
 
-        <div class="container products-wrapper">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="products-title">Listado de usuarios</h2>
-                </div>
-    
-                <% usuarios.forEach(function(user){ 
-                     
-                %>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <section class="product-box">
-                            <h2><%= user.first_name %></h2> 
-                        </section>
+    <body>
+        <!-- Header -->
+
+        <%- include("./partials/header") %>
+
+            <hr>
+            <main>
+
+                <div class="container products-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="products-title">Listado de usuarios</h2>
+                        </div>
+
+                        <% usuarios.forEach(function(user){ %>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <section class="product-box">
+                                    <a href="/users/<%= user.id %>"></a>
+                                    <figure class="product-box_image">
+                                        <img src="/img/usuarios/<%= user.image %>" alt="imagen de usuario" style="max-width: 100%";>
+									</figure>
+                                    <h2>
+                                        <%= user.first_name %>
+                                    </h2>
+                                </section>
+                            </div>
+                            <% }) %>
+
                     </div>
-                    <% }) %>
-            
-            </div>
-        </div>
+                </div>
 
 
-    </main>
-    <hr>
-    <footer>
-        <p>Todo los terminos y derechos estan sujetos a Clothx</p>
-    </footer>
-</body>
+            </main>
+            <hr>
+            <!-- footer -->
+            <%- include('partials/footer') %>
+                <!-- /footer -->
+    </body>
 
 </html>

@@ -211,14 +211,5 @@
   "category": "accesorios",
   "price": "2000",
   "image": "image-1654744759590.jpg"
- },
- {
-  "id": 25,
-  "name": "nuevo destacado",
-  "description": "dsdsd",
-  "category": "accesorios",
-  "price": "5",
-  "destacado": "on",
-  "image": "image-1654772073637.jpg"
  }
 ]

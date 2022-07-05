@@ -33,8 +33,8 @@ router.get('/create', usuariosController.create);
 router.post('/', [ upload.any() ] , usuariosController.store); 
 
 
-/*** GET ONE USER ***/ /* 
-router.get('/detail/:id', usuariosController.detail);  */
+/*** GET ONE USER ***/  
+router.get('/:id', usuariosController.detail);  
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', usuariosController.edit); 

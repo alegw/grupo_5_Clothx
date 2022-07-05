@@ -1,57 +1,61 @@
 <!DOCTYPE html> <!-- EN USO-->
 <html lang="en">
 
-  <%- include("./partials/head") %>
+<%- include("./partials/head") %>
 
-<body>
-<!-- Header -->
+  <body>
+    <!-- Header -->
 
-  <%- include("./partials/header") %>
+    <%- include("./partials/header") %>
 
-     <div class="caja-form">
+      <div class="caja-form">
 
-    <h2 class="titulo">¡Hola! <br> Ingresá tu usuario y contraseña</h2>
-     
-
-    
-    <form class="formulario" action="/registro" method="POST">
+        <h2 class="titulo">¡Hola! <br> Ingresá tu usuario y contraseña</h2>
 
 
-        <div class="campos">
-             <label for="nombre"> Usuario</label>
-             <input type="text" name="user" id="">
-         </div>
-       
-        
-         <div class="campos">
+        <form action="/products" method="POST" enctype="multipart/form-data">
+
+
+          <div class="campos">
+            <label for="nombre"> Usuario</label>
+            <input type="text" name="user" id="">
+          </div>
+
+
+          <div class="campos">
             <label for="nombre"> Contraseña</label>
             <input type="password" name="pass" id="">
+          </div>
+
+
+          <div class="campos">
+            <input class="enviar" type="submit">
+          </div>
+
+
+
+
+        </form>
+        <div class="olvide-y-crear">
+          <a href="/users/reestablecer">
+            <p class="letra-olvide">Olvide mi contraseña</p>
+          </a>
+          <a href="/users/create">
+            <p class="letra-olvide der">Crear cuenta</p>
+          </a>
         </div>
-      
-       
-        <div class="campos">
-            <input class="enviar" type="submit"> 
-        </div>
-       
-       
-       
-       
-    </form>
-    <div class="olvide-y-crear">
-        <a href="/users/reestablecer"><p class="letra-olvide">Olvide mi contraseña</p></a>
-        <a href="/users/create"><p class="letra-olvide der">Crear cuenta</p></a>
-    </div>
 
-  </div>
+      </div>
 
 
 
 
 
-  <!-- footer -->
-    
-  <%- include("./partials/footer") %>
+      <!-- footer -->
 
-    
-</body>
+      <%- include("./partials/footer") %>
+
+
+  </body>
+
 </html>
