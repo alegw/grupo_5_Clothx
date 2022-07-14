@@ -211,5 +211,11 @@
   "category": "accesorios",
   "price": "2000",
   "image": "image-1654744759590.jpg"
+ },
+ {
+  "id": 25,
+  "user": "",
+  "pass": "",
+  "image": "default-image.png"
  }
 ]
