@@ -186,5 +186,14 @@
   "phone": "+66 547 414 8796",
   "password": "1YaN0m",
   "image": "mujer.jpg"
+ },
+ {
+  "id": 21,
+  "first_name": "ALexis",
+  "last_name": "Garcia",
+  "email": "alegw1q2121312@ca.com",
+  "phone": "123123",
+  "password": "$2a$10$OXJVtVTlhQG6yZGV68VrJe.FDK3vLUm5FyvtsV3W49TTtA6haWTna",
+  "image": "default.jpg"
  }
 ]
