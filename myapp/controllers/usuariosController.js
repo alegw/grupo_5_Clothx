@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const usuariosFilePath = path.join(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
@@ -12,12 +13,12 @@ const controller = {
 		res.render('usuarios', { usuarios })
 	},
 
- 	detail: (req, res) => {
+	detail: (req, res) => {
 		let id = req.params.id
 		let user = usuarios.find(user => user.id == id)
-		res.render('usuarioDetail', { user }) 
+		res.render('usuarioDetail', { user })
 	},
-	
+
 	// Login de usuarios
 	login: (req, res) => {
 		res.render('userLogin')
@@ -34,22 +35,32 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-		let image	
-		console.log(req.files);
-		if (req.files[0] != undefined) {
-			image = req.files[0].filename
-		} else {
-			image = 'default.jpg'
-		}
-		let nuevoUsuario = {
-			id: usuarios[usuarios.length - 1].id + 1,
-			...req.body,
-			imagen: image
-		};
+		let resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
 
-		usuarios.push(nuevoUsuario)
-		fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, ' '));
-		res.redirect('/');
+			res.render('usuario-create-form', {
+				errors: resultValidation.mapped(), oldData: req.body
+			});
+		} else {
+			let image
+			console.log(req.files);
+			if (req.files[0] != undefined) {
+				image = req.files[0].filename
+			} else {
+				image = 'default.jpg'
+			}
+			let nuevoUsuario = {
+				id: usuarios[usuarios.length - 1].id + 1,
+				...req.body,
+				image: image
+			};
+
+			usuarios.push(nuevoUsuario)
+			fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, ' '));
+			res.redirect('/');
+		}
+
+
 	},
 
 	// Update - Form to edit

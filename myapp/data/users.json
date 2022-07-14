@@ -186,5 +186,25 @@
   "phone": "+66 547 414 8796",
   "password": "1YaN0m",
   "image": "mujer.jpg"
+ },
+ {
+  "id": 21,
+  "first_name": "123123",
+  "last_name": "123123",
+  "email": "12312@asd.com",
+  "phone": "123123",
+  "password": "123123",
+  "repassword": "123123",
+  "image": "default.jpg"
+ },
+ {
+  "id": 22,
+  "first_name": "Alexis",
+  "last_name": "Garcia",
+  "email": "alegw1@gmail.com",
+  "phone": "123123",
+  "password": "123123",
+  "repassword": "123123",
+  "image": "default.jpg"
  }
 ]
