@@ -114,7 +114,8 @@
   "colors": "Rosa",
   "price": 12000,
   "size": "XL",
-  "gender": "Male"
+  "gender": "Male",
+  "destacado": "on"
  },
  {
   "id": 14,
@@ -125,7 +126,8 @@
   "colors": "Naranja",
   "price": 12000,
   "size": "XL",
-  "gender": "Male"
+  "gender": "Male",
+  "destacado": "on"
  },
  {
   "id": 15,
@@ -145,6 +147,7 @@
   "colors": "Verde",
   "price": 14999.99,
   "size": "XL",
+  "destacado": "on",
   "gender": "Male"
  },
  {
@@ -210,6 +213,7 @@
   "description": "Excelente",
   "category": "accesorios",
   "price": "2000",
+  "destacado": "on",
   "image": "image-1654744759590.jpg"
  },
  {

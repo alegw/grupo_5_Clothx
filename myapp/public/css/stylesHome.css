@@ -87,11 +87,11 @@ body{
 .titulo{
    padding-top: 3%;
    padding-bottom: 3%;
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'Quicksand', sans-serif;
    font-weight: 500;
    text-transform: uppercase;
    text-align: center;
-   color: #0F80A4;
+   color: #1b4f74;
 }
 .tipo-texto{
    font-size: 26px;
@@ -100,7 +100,7 @@ body{
    padding-top: 5%;
    padding-bottom: 5%;
    font-family: 'Roboto', medium;
-   color: #a8c446;
+   color: #1b4f74;
 }
 /*------------------------------------TEXTO---------------------------------------*/
 @media (min-width: 320px){
@@ -124,6 +124,10 @@ body{
    .categorias article{
       display: flex;
       width: 80%; 
+   }
+   .categorias-main h4{
+      color: #242424;
+      font-family: 'Roboto', medium;
    }
    .banner-inferior{
       display:flex;
@@ -204,7 +208,7 @@ body{
    font-weight: 800;
    font-size: 22px;
    text-decoration: none;
-   color:darkslateblue;
+   color:#1b4f74;
    margin: 5px;
    margin-bottom: 10px;
 }
@@ -214,9 +218,9 @@ body{
    justify-content: space-evenly;
    align-items: center;
    flex-wrap: wrap;
-
-   padding: 15px;
-   background-color: darkolivegreen;
+   margin-left: -20px;
+   margin-right: -20px;
+   background-color: #58B4F5;
 }
 
 .caja-vermas{
@@ -228,24 +232,27 @@ body{
 
 .botonuno {
 
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
-	border-radius:10px;
-	border:1px solid #4e6096;
+	
+	background-color:#1b4f74;
+	border-radius:8px;
+	border:none;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:12px;
+	font-size:16px;
+   font-family: 'Quicksand', sans-serif;
    text-transform: uppercase;
 	padding:12px 37px;
 	text-decoration:none;
+   box-shadow: inset 0 0 0 0 #58B4F5;
+   transition: ease-out 0.3s ;
 
    
 }
 .botonuno:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
+	box-shadow: inset 300px 0 0 0 #58B4F5;
+	background-color:#58B4F5;
 }
 .botonuno:active {
 	position:relative;
