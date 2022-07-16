@@ -195,5 +195,14 @@
   "phone": "123123",
   "password": "$2a$10$OXJVtVTlhQG6yZGV68VrJe.FDK3vLUm5FyvtsV3W49TTtA6haWTna",
   "image": "default.jpg"
+ },
+ {
+  "id": 22,
+  "first_name": "dasd",
+  "last_name": "sdasd",
+  "email": "sdsd@ad",
+  "phone": "23214123",
+  "password": "$2a$10$dp1Os5ixUZapmF85io.dveHW.6uqeX.JuAgaadMm/RhL/F4e45HrW",
+  "image": "default.jpg"
  }
 ]

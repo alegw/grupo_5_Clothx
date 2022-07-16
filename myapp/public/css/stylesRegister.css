@@ -23,7 +23,7 @@
     width: 100%;
     height: 30px;
     border-radius: 6px;
-    border: 1px solid gray;
+    border:none;
     margin-top: 5px;
 }
 
@@ -31,20 +31,9 @@
     width: 100%;
     height: 30px;
     border-radius: 6px;
-    border: 1px solid gray;
+    border:none;
     margin-top: 5px;
 }
-
-
-.campos .enviar{
-    margin-top: 10px;
-}
-
-.campos .enviar:hover{
-    background-color: darkmagenta;
-    color: white;
-}
-
 
 
 .formulario{
