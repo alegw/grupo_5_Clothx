@@ -57,6 +57,7 @@
   "description": "Nos referimos a los shorts, los pantalones cortos de toda la vida que se reinventan año tras año para adaptarse a las nuevas tendencias que dicta la industria de la moda. En tejido vaquero, de lino, de seda o en algodón, estas piezas sirven para presumir de piernas y, sobre todo, para no pasar calor. En este caso su color es Fuxia",
   "category": "",
   "price": "7000",
+  "destacado": "on",
   "image": "Ropa2-1.jpg"
  },
  {
@@ -88,17 +89,17 @@
  },
  {
   "id": 11,
-  "name": "Camisa",
+  "name": "Camisa Crema",
   "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Amarilla",
   "category": "",
   "price": "9000",
-  "image": "Ropa3-1.jpg"
+  "image": "Ropa3-1.png"
  },
  {
   "id": 12,
-  "name": "Camisa Lisa Celeste",
+  "name": "Camisa Celeste",
   "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Celeste",
-  "image": "Ropa3-2.jpg",
+  "image": "Ropa3-2.png",
   "category": "Camisa",
   "colors": "Celeste",
   "price": 12000,
@@ -107,9 +108,9 @@
  },
  {
   "id": 13,
-  "name": "Camisa Lisa Rosa",
+  "name": "Camisa Rosa",
   "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Rosa",
-  "image": "Ropa3-3.jpg",
+  "image": "Ropa3-3.png",
   "category": "Camisa",
   "colors": "Rosa",
   "price": 12000,
@@ -119,9 +120,9 @@
  },
  {
   "id": 14,
-  "name": "Camisa Lisa Naranja",
+  "name": "Camisa Naranja",
   "description": "Prenda de vestir de tela que cubre el torso , abotonada por delante , generalmente con cuello y mangas . 2. f. Prenda interior de tela fina y largura media , que cubre hasta más abajo de la cintura . En este caso su color es Naranja",
-  "image": "Ropa3-4.jpg",
+  "image": "Ropa3-4.png",
   "category": "Camisa",
   "colors": "Naranja",
   "price": 12000,
@@ -142,7 +143,7 @@
   "id": 16,
   "name": "Sweater de vestir Verde",
   "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Verde",
-  "image": "Ropa4-2.jpg",
+  "image": "Ropa4-2.png",
   "category": "Sweater",
   "colors": "Verde",
   "price": 14999.99,
@@ -154,45 +155,69 @@
   "id": 17,
   "name": "Sweater de vestir Violeta",
   "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Violeta",
-  "image": "Ropa4-3.jpg",
+  "image": "Ropa4-3.png",
   "category": "Sweater",
   "colors": "Violeta",
   "price": 14999.99,
   "size": "XL",
   "gender": "Male"
  },
- {
-  "id": 18,
-  "name": "camisani",
-  "description": "tapado",
-  "categoria": "",
-  "precioProduct": "",
-  "image": "Ropa5-1.jpg"
- },
+{
+    "id": 18,
+    "name": "Sweater de vestir Violeta",
+    "description": "Un suéter (del inglés sweater, 'para sudar') o un jersey o Yersey es una prenda interior de punto, frecuentemente de lana, algodón o telas sintéticas, la cual cubre el tronco y extremidades superiores. Una prenda similar es el abrigo o buzo, de malla fina. En este caso su color es Violeta",
+    "image": "Ropa4-1.png",
+    "category": "Sweater",
+    "colors": "Violeta",
+    "price": 14999.99,
+    "size": "XL",
+    "gender": "Female"
+   },
  {
   "id": 19,
-  "name": "Sombrero de fiesta Azul",
-  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Azul",
-  "image": "Ropa5-2.jpg",
-  "category": "Sombrero",
-  "colors": "Azul",
+  "name": "Sombrero Blanco",
+  "description": "tapado",
+  "colors": "Blanco",
+  "categoria": "Sombrero",
   "price": 6000,
-  "size": "S",
-  "gender": "Female"
+  "image": "Ropa5-1.png"
  },
  {
   "id": 20,
-  "name": "Sombrero de fiesta Marron",
-  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Marron",
-  "image": "Ropa5-3.jpg",
+  "name": "Sombrero de fiesta Azul",
+  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Azul",
+  "image": "Ropa5-2.png",
   "category": "Sombrero",
-  "colors": "Marron",
+  "colors": "Azul",
   "price": 6000,
+  "destacado": "on",
   "size": "S",
   "gender": "Female"
  },
  {
-  "id": 22,
+  "id": 21,
+  "name": "Sombrero de fiesta Rojo",
+  "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Marron",
+  "image": "Ropa5-3.png",
+  "category": "Sombrero",
+  "colors": "Rojo",
+  "price": 6000,
+  "size": "S",
+  "gender": "Male"
+ },
+ {
+    "id": 22,
+    "name": "Sombrero Rosa",
+    "description": "Prenda para cubrir la cabeza , que consta de copa y ala . 2. m. Prenda de adorno usada por las mujeres para cubrirse la cabeza. En este caso su color es Marron",
+    "image": "Ropa5-4.png",
+    "category": "Sombrero",
+    "colors": "Rosa",
+    "price": 6000,
+    "size": "S",
+    "gender": "Female"
+   },
+ {
+  "id": 23,
   "name": "Gorro de lana",
   "description": "calentito para el invierno",
   "category": "accesorios",
@@ -200,26 +225,13 @@
   "image": "imageProduct-1654744288147.png"
  },
  {
-  "id": 23,
+  "id": 24,
   "name": "Bufanda",
   "description": "2 vueltas de cuello",
   "category": "accesorios",
   "price": "1500",
-  "image": "imageProduct-1654125709996.png"
- },
- {
-  "id": 24,
-  "name": "Sombrero Blanco",
-  "description": "Excelente",
-  "category": "accesorios",
-  "price": "2000",
   "destacado": "on",
-  "image": "image-1654744759590.jpg"
- },
- {
-  "id": 25,
-  "user": "",
-  "pass": "",
-  "image": "default-image.png"
+  "image": "imageProduct-1654125709996.png"
  }
+
 ]
