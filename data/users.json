@@ -213,5 +213,14 @@
   "phone": "0336154539663",
   "password": "$2a$10$XrodbCJeidR3sC6DjyFRPOUAHJgDr0FXWKHcnAXOsIWolhtThRbO6",
   "image": "image-1658153250521.png"
+ },
+ {
+  "id": 24,
+  "first_name": "asda",
+  "last_name": "asdasd",
+  "email": "asdas",
+  "phone": "asdasd",
+  "password": "$2a$10$zfS07wHbnvx8X/B6FyfI3O0mZOFkNcMybwKJhN2yD.NG7v2PkEiAG",
+  "image": "default.jpg"
  }
 ]
