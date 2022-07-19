@@ -1,0 +1,107 @@
+<!DOCTYPE html><!-- EN USO-->
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/css/stylesDetail.css" />
+<!-- Head -->
+
+<%- include("./partials/head") %>
+
+    <!-- Head -->
+
+    <body>
+        <!-- Header -->
+
+        <%- include("./partials/header") %>
+
+            <hr>
+            <main>
+                <div class="main1">
+
+                    <div class="col-12 col-lg-6">
+                        <div><img style="max-width: 100%;" src="/img/products/<%= product.image %>" alt="product image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <div class="titulos">
+                            <h2>
+                                <%= product.name %>
+                            </h2>
+                            <br>
+                        </div>
+                        <section>
+                            <h4>Informacion de producto</h4>
+                            <div>
+                                <%= product.description %>
+                            </div>
+                            <br>
+
+                            <h4>Categoría</h6>
+                                <div>
+                                    <%= product.category %>
+                                </div>
+
+                        </section>
+                        <div>
+                            <h4> Variante Color: </h4>
+                        </div>
+                        <div>
+                            <%= product.colors%>
+                        </div>
+                        <br>
+                        <div class="titulo2">
+                            <h4>Precio</h4>
+                            <div class="precio">
+                                <%= product.price %>
+                            </div>
+                        </div>
+                        <ul class="actions-list">
+                    <li>
+                        <i class="fas fa-credit-card"></i>
+                        <p>    Pagá en 12 cuotas sin interes</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-store"></i>
+                        <p>    Retiro gratis en locales</p>
+                    </li>
+                </ul>
+                        <br> <br><br><br>
+                        <button><a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR
+                                PRODUCTO</a></button>
+
+                        <br><br><br>
+    
+                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+                            style="display: inline-flex">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+
+                        <br>
+                        <h2 class="botonuno"> <a href="/productCart/" style="color: white;">  Agregar al Carrito </a></h2>
+
+
+                    </div>
+
+
+
+
+                </div>
+                <h2 class="titulos">Productos relacionados</h2>
+                <div class="flexfotos">
+                    <div><a href="/products/6"><img class="img-chica" src="/img/Productos/Ropa2-1.jpg"
+                                alt="Short fuxia"></a></div>
+                    <div><a href="/products/11"><img class="img-chica" src="/img/Productos/Ropa3-1.jpg"
+                                alt="Camisa amarilla"></a></div>
+                    <div><a href="/products/16"><img class="img-chica" src="/img/Productos/Ropa4-1.jpg"
+                                alt="Buzo verde"></a></div>
+                    <div><a href="/products/18"><img class="img-chica" src="/img/Productos/Ropa5-1.jpg"
+                                alt="Gorro beige"></a></div>
+
+                </div>
+            </main>
+            <hr>
+            <!-- footer -->
+            <%- include('partials/footer') %>
+                <!-- /footer -->
+    </body>
+
+</html>

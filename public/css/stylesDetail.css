@@ -1,0 +1,168 @@
+body {
+    background-color: rgb(236, 236, 236);
+}
+
+.main1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 2%;
+}
+
+.box1-2 {
+    display: inline-flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.box1 {
+    width: 75%;
+}
+
+/* .box2 {
+    display: inline-flex;
+    flex-direction: column;
+    width: 35%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+ */
+.box3 {
+    width: 50%;
+    font-size: 20px;
+}
+
+footer {
+    padding: 10%;
+    background-color: #0F80A4;
+    color: white;
+}
+
+.img-chica {
+    width: 45%;
+
+}
+
+.titulos {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center; 
+    color: #0F80A4;
+}
+
+.titulo2 {
+    font-size: 20px;
+    color: black;
+}
+
+.precio {
+    color: green;
+    font-size: 25px;
+}
+
+.boton {
+    margin: 0 auto;
+    padding: 5px;
+    animation-name: color1;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes color {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: #4791d0;
+    }
+}
+
+.flexfotos {
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-color: #ebebeb;
+    border-style: solid;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+}
+
+-->.flexfotos img {
+    display: inline-flex;
+    border-radius: 30%;
+    text-align: center;
+}
+
+.actions-list {
+    margin-bottom: 5px;
+    align-items: left;
+    padding: 0;
+}
+
+.actions-list li {
+    display: flex;
+    align-items: left;
+    margin: 0px 0;
+    padding: 10px 0;
+}
+
+.actions-list i {
+    color: var(--green);
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.actions-list p {
+    color: var(--gray);
+    font-size: 1em;
+    margin: 0;
+}
+/*====== Products ======*/
+
+.products-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.products-title {
+    font-size: 2.4em;
+    font-weight: 400;
+    color: var(--gray);
+}
+.product-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 300ms;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .product-box a {
+    display: block;
+  }
+  
+  .product-box_image {
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .textojustificado{
+    font-size: 20px;
+    line-height: 1.6;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Roboto', medium;
+    color: black
+  }

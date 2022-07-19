@@ -1,0 +1,32 @@
+.articulo{
+    border: 1px solid black;
+    border-radius: 9px;
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.sombreroEdit{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+input{
+    position: relative;
+    top: 30%;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+input:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+
+.product-image-min{
+    border-radius: 9px;
+    border-right: 1px solid black;
+    margin-right: 8px;
+}
+label{
+    padding-right: 10px;
+    margin-left: 10px;
+}
