@@ -58,7 +58,7 @@ body{
     padding-right: 20px;
  };
 
- @media (max-width: 460px){
+ @media (min-width: 320px){
      /* Mobile*/
     .top-header{
         display: flex;
@@ -70,6 +70,12 @@ body{
     .imagen-logo{
         width: 30%;
      }
+     .botones{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 4%;
+      height:80%;
+   }
 };
  @media (max-width: 768px){
     /* Pc*/
@@ -83,6 +89,12 @@ body{
     .imagen-logo{
         width: 8%;
      }
+     .botones{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2%;
+      height:80%;
+   }
  }
  @media (min-width: 1200px){
     /* Pc*/
@@ -96,6 +108,12 @@ body{
     .imagen-logo{
         width: 1.5%;
      }
+     .botones{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1%;
+      height:80%;
+   }
  }
 
 

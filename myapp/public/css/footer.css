@@ -19,4 +19,51 @@ footer{
     font-size: 10pt;
     font-family: 'Roboto', medium;
  }
- 
+ @media (min-width: 320px){
+   /* Mobile*/
+   footer{
+      padding: 5%;
+      background-color: #1f1f1f;
+      color: white;
+   }
+   .titulo-footer {
+      display: inline-flex;
+      font-size: 9pt;
+      font-family: 'Quicksand', sans-serif;
+   }
+   .info-footer {
+      margin-top: 20px;
+      font-size: 8pt;
+      font-family: 'Roboto', medium;
+   }
+   .info-footer2 {
+      margin-left: 60%;
+      margin-top: -26px;
+      font-size: 8pt;
+      font-family: 'Roboto', medium;
+   }
+ }
+ @media (min-width: 600px){
+   /* Tablet*/
+   footer{
+      padding: 3%;
+      background-color: #1f1f1f;
+      color: white;
+   }
+   .titulo-footer {
+      display: inline-flex;
+      font-size: 12pt;
+      font-family: 'Quicksand', sans-serif;
+   }
+   .info-footer {
+      margin-top: 20px;
+      font-size: 9pt;
+      font-family: 'Roboto', medium;
+   }
+   .info-footer2 {
+      margin-left: 60%;
+      margin-top: -26px;
+      font-size: 9pt;
+      font-family: 'Roboto', medium;
+   }
+ }
