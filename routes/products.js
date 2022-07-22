@@ -5,7 +5,7 @@ const multer = require('multer')
 const path = require('path')
 
 // ************ Controller Require ************
-const productsController = require('../controllers/productsController');
+const productsControllerDb = require('../controllers/productsControllerDb');
 
 // ************ Multer ************ 
 var storage = multer.diskStorage({
@@ -19,26 +19,27 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+//router.get('/', productsController.index); 
+router.get('/', productsControllerDb.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productsController.create); 
-router.post('/', upload.any(), productsController.store); 
+router.get('/create', productsControllerDb.create); 
+router.post('/', upload.any(), productsControllerDb.store); 
 
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/:id', productsController.detail); 
+router.get('/:id', productsControllerDb.detail); 
 
 /*** POR CATEGORIA ***/ 
-router.get('/category/:category', productsController.category); 
+//router.get('/category/:category', productsController.category); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productsController.edit); 
-router.patch('/edit/:id', upload.any(),productsController.update); 
+router.get('/edit/:id', productsControllerDb.edit); 
+router.patch('/edit/:id', upload.any(),productsControllerDb.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productsController.destroy); 
+router.delete('/delete/:id', productsControllerDb.destroy); 
 
 
  

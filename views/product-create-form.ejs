@@ -1,85 +1,58 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
-    <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
-  <%- include("./partials/head") %>
+<link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<%- include("./partials/head") %>
+
   <body>
     <%- include("./partials/header") %>
-    <form action="/products" method="POST"  enctype="multipart/form-data">
+      <form action="/products" method="POST" enctype="multipart/form-data">
 
-    <main></main>
-    <div class="caja-form">
-      <h2 class="titulo">Crear publicacion de producto</h2>
 
-      <div class="campos">
-        <label for="nombreProduct" class="smallHeader"> Nombre de producto</label>
-        <input type="text" name="name" id="" />
-      </div>
-      <div class="campos">
-        <label for="description" class="smallHeader"> Descripcion de producto</label>
-        <input type="text" name="description" id="" />
-      </div>
+        <div class="caja-form">
+          <h2 class="titulo">Crear publicacion de producto</h2>
 
-       <div class="campos">
-        <label for="imageProduct" class="smallHeader">Imagen del producto</label
-        ><input type="file" name="image" id="image" class="form-input">
-      </div> 
-      <div class="campos">
-        <label for="categoryProduct" class="smallHeader">Categoria del producto</label
-        ><select name="category" id="">
-          <option value="pollera">Pollera</option>
-          <option value="pantalon">Pantalon</option>
-          <option value="camisa">Camisa</option>
-          <option value="remera">Remera</option>
-          <option value="sweater">Sweater</option>
-          <option value="accesorios">Accesorios</option>
-        </select>
-      </div>
-      <!-- <div class="campos">
-        <label for="" class="smallHeader">Seleccionar talles disponibles</label>
-        <input type="checkbox" name="talleS" /><label for="talleS"
-          >Talle S</label
-        >
-        <input type="checkbox" name="talleM" /><label for="talleS"
-          >Talle M</label
-        >
-        <input type="checkbox" name="talleL" /><label for="talleS"
-          >Talle L</label
-        >
-        <input type="checkbox" name="talleXL" /><label for="talleS"
-          >Talle XL</label
-        >
-      </div>
-      <div class="campos">
-        <label for="" class="smallHeader">Seleccionar colores disponibles</label>
-        <input type="checkbox" name="colorBlue" /><label for="colorBlue"
-          >Azul</label
-        >
-        <input type="checkbox" name="colorGreen" /><label for="colorGreen"
-          >Verde</label
-        >
-        <input type="checkbox" name="colorPink" /><label for="colorPink"
-          >Rosa</label
-        >
-        <input type="checkbox" name="colorWhite" /><label for="colorWhite"
-          >Blanco</label
-        >
-      </div> -->
-      <div class="campos">
-        <label for="precioProduct" class="smallHeader"> Precio del producto</label>
-        <input type="number" name="price" id="" min="1" step="any" />
-      </div>
+          <div class="campos">
+            <label for="nombreProduct" class="smallHeader"> Nombre</label>
+            <input type="text" name="name" id="" />
+          </div>
+          <div class="campos">
+            <label for="description" class="smallHeader"> Descripcion de product</label>
+            <input type="text" name="description" id="" />
+          </div>
 
-      <div class="campos">
-        <label for="description" class="smallHeader"> Producto destacado</label>
-        <input type="checkbox" name="destacado" id="" />
-      </div>
+          <div class="campos">
+            <label for="imageProduct" class="smallHeader">Imagen</label><input type="file" name="image"
+              id="image" class="form-input">
+          </div>
+          <div class="campos">
+            <label for="categoryProduct" class="smallHeader">Categoria</label><select name="category_id"
+              id="">
+              <% categories.forEach(category=> { %>
+                <option value=<%= category.id %> > <%=category.name%>
+                </option>
+                <% })%>
+            </select>
+          </div>
+          
+          <div class="campos">
+            <label for="description" class="smallHeader"> Color</label>
+            <input type="text" name="color" id="" />
+          </div>
 
-      
-      <div class="campos">
-        <input class="crear" type="submit" value="Crear"> 
-    </div>
-    </div>
-    </form>
-    <%- include("./partials/footer") %>
+          <div class="campos">
+            <label for="precioProduct" class="smallHeader"> Precio</label>
+            <input type="number" name="price" id="" min="1" step="any" />
+          </div>
+
+
+
+
+          <div class="campos">
+            <input class="crear" type="submit" value="Crear">
+          </div>
+        </div>
+      </form>
+      <%- include("./partials/footer") %>
   </body>
+
 </html>

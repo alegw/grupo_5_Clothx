@@ -11,7 +11,7 @@
       <h2 class="titulo">Editar publicacion de producto</h2>
 
       <div class="campos">
-        <label for="nombreProduct" class="smallHeader"> Nombre de producto</label>
+        <label for="nombreProduct" class="smallHeader"> Nombre</label>
         <input type="text" name="name" id="" value="<%= productToEdit.name %>">
          
       </div>
@@ -20,12 +20,12 @@
 
 
       <div class="campos">
-        <label for="description" class="smallHeader"> Descripcion de producto</label>
+        <label for="description" class="smallHeader"> Descripcion</label>
         <input type="text" name="description" id="" value="<%= productToEdit.description %>"/>
       </div>
        <div class="campos">
-        <label for="imageProduct" class="smallHeader">Imagen del producto</label
-        ><input type="file" name="imageProduct" accept="jpg, jpeg" multiple />
+        <label for="imageProduct" class="smallHeader">Imagen</label
+        ><input type="file" name="image" accept="jpg, jpeg" multiple />
       </div> 
 
       
@@ -33,75 +33,37 @@
       <p><%= productToEdit.category %></p>
       <div class="campos">
         <label for="categoryProduct" class="smallHeader"></label
-        ><select name="category" id="">
-
+        ><select name="category_id" id="">
+          <% categories.forEach(category=> { %>
+            <option value=<%= category.id %> > <%=category.name%>
+            </option>
+            <% })%>
           
-          
-          <option value="">Cambiar por otra categoría</option>
-          <option value="pollera">Pollera</option>
-          <option value="pantalon">Pantalon</option>
-          <option value="camisa">Camisa</option>
-          <option value="remera">Remera</option>
-          <option value="sweater">Sweater</option>
-          <option value="accesorios">Accesorios</option>
-
 
 
         </select>
       </div>
 
-      
-
-      
+    
       <div class="campos">
-<!--         <label for="" class="smallHeader">Seleccionar talles disponibles</label>
-        <input type="checkbox" name="talleS" /><label for="talleS"
-          >Talle S</label
-        >
-        <input type="checkbox" name="talleM" /><label for="talleS"
-          >Talle M</label
-        >
-        <input type="checkbox" name="talleL" /><label for="talleS"
-          >Talle L</label
-        >
-        <input type="checkbox" name="talleXL" /><label for="talleS"
-          >Talle XL</label
-        >
-      </div> 
-      <div class="campos">
-        <label for="" class="smallHeader">Seleccionar colores disponibles</label>
-        <input type="checkbox" name="colorBlue" /><label for="colorBlue"
-          >Azul</label
-        >
-        <input type="checkbox" name="colorGreen" /><label for="colorGreen"
-          >Verde</label
-        >
-        <input type="checkbox" name="colorPink" /><label for="colorPink"
-          >Rosa</label
-        >
-        <input type="checkbox" name="colorWhite" /><label for="colorWhite"
-          >Blanco</label
-        >
-      </div> -->
-      <div class="campos">
-        <label for="precioProduct" class="smallHeader"> Precio del producto</label>
-        <input type="number" name="price" id="" value=<%= productToEdit.price %>>
+        <label for="precioProduct" class="smallHeader"> Precio</label>
+        <input type="number" name="price" id="" value=<%= productToEdit.price %> >
       </div>
 
 
       <div class="campos">
-        <label for="description" class="smallHeader"> Producto destacado</label>
-        <input type="checkbox" name="destacado" id="" />
+        <label for="description" class="smallHeader"> Color</label>
+        <input type="text" name="color" id="" value=<%= productToEdit.color %>>
       </div>
 
 
       
       <div class="campos">
-        <!--<input class="crear" type="submit" value="Modificar">  -->
+        
         <button type="submit" class="crear">Guardar Cambios</button>
 
     </div>
-    </div>
+    
   </form>
   <%- include("./partials/footer") %>
 </body>
