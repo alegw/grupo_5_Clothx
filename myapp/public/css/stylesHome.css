@@ -286,12 +286,16 @@ body{
    height: 30px;
    border-radius: 6px;
    margin-top: 5px;
+   margin-bottom: 5px;
+   background-color: rgb(199, 199, 199);
+   border:none;
 }
 
 .campos button{
    width: 100%;
    height: 30px;
    border-radius: 6px;
+   background-color: darkgrey;
    border:none;
    margin-top: 5px;
 }

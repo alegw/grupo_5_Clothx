@@ -1,5 +1,22 @@
 footer{
-    padding: 10%;
+    padding: 5%;
     background-color: #1f1f1f;
     color: white;
  }
+ .titulo-footer {
+    display: inline-flex;
+    font-size: 14pt;
+    font-family: 'Quicksand', sans-serif;
+ }
+ .info-footer {
+    margin-top: 20px;
+    font-size: 10pt;
+    font-family: 'Roboto', medium;
+ }
+ .info-footer2 {
+    margin-left: 20%;
+    margin-top: -30px;
+    font-size: 10pt;
+    font-family: 'Roboto', medium;
+ }
+ 
