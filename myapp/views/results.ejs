@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+
+
+
+<!-- todos los productos -->
+<div class="container products-wrapper">
+	<div class="row">
+		<div class="col-12">
+			<h4>Resultados de la búsqueda: <%= search %></h4>
+		</div>
+		<% if (products.length > 0) {
+			products.forEach(function(product){  
+				let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
+				%>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+					  <a href="/products/<%= product.id %>">
+						<figure class="product-box_image">
+						  <img src="/img/products/<%= product.image %>" alt="imagen de producto" style="max-width: 100%";>
+						</figure>
+						<article class="product-box_data">
+						  <div>
+							<div class="nombreProd"><%= product.name %></div>
+							<br>
+							<div class="precioProd"> $ <%= product.price %></div>	
+						  </div>
+	  
+						</article>
+					  </a>
+					</section>
+				  </div>
+				<% })} else { %>
+					<div class="col-12">
+						<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+					</div>
+					<% } %>
+				</div>
+			</div>
+			<!-- /todos los productos -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

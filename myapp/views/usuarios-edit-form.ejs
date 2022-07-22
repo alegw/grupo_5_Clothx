@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--EN USO-->
+<html lang="en">
+<link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<%- include("./partials/head") %>
+
+  <body>
+    <%- include("./partials/header") %>
+
+      <main></main>
+      <form action="/users/edit/<%= usuarioEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <div class="caja-form">
+          <h2 class="titulo">Editar informacion de Usuario</h2>
+
+          <div class="campos">
+            <label for="nombreUsuario" class="smallHeader"> Nombre de Usuario</label>
+            <input type="text" name="first_name" id="" value="<%= usuarioEdit.first_name %>">
+          </div>
+
+          <div class="campos">
+            <label for="apellidoUsuario" class="smallHeader"> Apellido del Usuario</label>
+            <input type="text" name="last_name" id="" value="<%= usuarioEdit.last_name %>">
+          </div>
+
+          <div class="campos">
+            <label for="emailUsuario" class="smallHeader"> Email del Usuario</label>
+            <input type="text" name="email" id="" value="<%= usuarioEdit.email %>">
+          </div>
+
+          <div class="campos">
+            <label for="telefonoUsuario" class="smallHeader"> Telefono del Usuario</label>
+            <input type="text" name="phone" id="" value="<%= usuarioEdit.phone %>">
+          </div>
+
+          <div class="campos">
+            <label for="imageUser" class="smallHeader">Imagen del Usuario</label><input type="file" name="imageUser"
+              accept="jpg, jpeg" multiple />
+          </div>
+
+          <div class="campos">
+            <!--<input class="crear" type="submit" value="Modificar">  -->
+            <button type="submit" class="crear">Guardar Cambios</button>
+
+          </div>
+        </div>
+      </form>
+      <%- include("./partials/footer") %>
+  </body>
+
+</html>

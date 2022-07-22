@@ -1,0 +1,79 @@
+<!DOCTYPE html><!-- EN USO-->
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/css/stylesDetail.css" />
+<!-- Head -->
+
+<%- include("./partials/head") %>
+
+    <!-- Head -->
+
+    <body>
+        <!-- Header -->
+
+        <%- include("./partials/header") %>
+
+            <hr>
+            <main>
+                <div class="main1">
+
+                    <div class="col-12 col-lg-6">
+                        <div><img style="max-width: 100%;" src="/img/usuarios/<%= user.image %>" alt="user image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <div class="titulos">
+                            <h2>
+                                <%= user.name %>
+                            </h2>
+                            <br>
+                        </div>
+                        <section>
+                            <h4>Informacion de Usuario</h4>
+                            <div>
+                                <%= user.first_name %>
+                                    <%= user.last_name %>
+                            </div>
+                            <br>
+
+                            <h4>Email</h6>
+                                <div>
+                                    <%= user.email %>
+                                </div>
+
+                        </section>
+                        <div>
+                            <h4> Teléfono: </h4>
+                        </div>
+                        <div>
+                            <%= user.phone%>
+                        </div>
+                        <br>
+                        <br> <br><br><br>
+                        <button><a href="/users/edit/<%= user.id %>" class="action-button edit">EDITAR
+                                USUARIO</a></button>
+
+                        <br><br><br>
+
+                        <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST"
+                            style="display: inline-flex">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+
+                        <br>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </main>
+            <hr>
+            <!-- footer -->
+            <%- include('partials/footer') %>
+                <!-- /footer -->
+    </body>
+
+</html>
