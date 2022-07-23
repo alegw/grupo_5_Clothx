@@ -1,0 +1,84 @@
+<!DOCTYPE html><!-- EN USO-->
+<html lang="en">
+<link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<%- include("./partials/head") %>
+
+	<body>
+		<%- include("./partials/header") %>
+			
+
+				<main></main>
+				<div class="caja-form">
+					<h2 class="titulo">¡Te damos la bienvenida a Clothx! DB</h2>
+					<h3>Creá tu cuenta!</h3>
+
+					<form action="/users" method="POST" enctype="multipart/form-data">
+					<div class="campos">	
+								<label>Nombre</label>
+								<input type="text" name="name" id="" />
+								<!-- <% if (locals.errors && errors.first_name) { %>
+									<div class="errors">
+										<%= errors.first_name.msg %>
+									</div>
+								<% } %> -->
+
+								<label>Apellido</label>
+								<input type="text" name="last_name" id="" value = "<%= locals.oldData ? oldData.last_name : null %>"/>
+								<!-- <% if (locals.errors && errors.last_name) { %>
+									<div class="errors">
+										<%= errors.last_name.msg %>
+									</div>
+								<% } %> -->
+
+								<label>Email</label>
+								<input type="text" name="email" id=""/>
+								<!-- <% if (locals.errors && errors.email) { %>
+									<div class="errors">
+										<%= errors.email.msg %>
+									</div>
+								<% } %> -->
+
+								<!-- <label>Teléfono</label>
+								<input type="text" name="phone" id="" value = "<%= locals.oldData ? oldData.phone : null %>"/>
+								<% if (locals.errors && errors.phone) { %>
+									<div class="errors">
+										<%= errors.phone.msg %>
+									</div>
+								<% } %> -->
+
+								<label>Contraseña</label>
+								<input type="text" name="password" id="">
+								<!-- <% if (locals.errors && errors.password) { %>
+									<div class="errors">
+										<%= errors.password.msg %>
+									</div>
+								<% } %> -->
+
+								
+
+								<div><label for="imageUser" class="smallHeader">Imagen de Perfil</label>
+									<input type="file" name="avatar" id="image" class="form-input"/>
+									<!-- <% if (locals.errors && errors.image) { %>
+										<div class="errors">
+											<%= errors.image.msg %>
+										</div>
+									<% } %> -->
+								</div>
+
+
+                                
+
+
+					</div>
+					<br>
+					<p class="">Al presionar Crear aceptás los <a href='/tyc'>Términos y Condiciones</a>.</p>
+
+					<div class="campos">
+						<input class="boton" type="submit" value="Crear">
+					</div>
+				</div>
+			</form>
+			<%- include("./partials/footer") %>
+	</body>
+
+</html>

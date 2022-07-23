@@ -6,7 +6,7 @@ const path = require('path')
 const { body } = require ('express-validator')
 
 // ************ Controller Require ************
-const usuariosController = require('../controllers/usuariosController');
+const usuariosControllerDb = require('../controllers/usuariosControllerDb');
 
 // ************ Multer ************ 
 var configuracion = multer.diskStorage({
@@ -20,39 +20,42 @@ var configuracion = multer.diskStorage({
 var upload = multer({storage: configuracion})
 
 /*** GET ALL usuarios ***/ 
-router.get('/', usuariosController.index); 
+router.get('/', usuariosControllerDb.index); 
 
 /*** Login usuarios ***/ 
-router.get('/login', usuariosController.login); 
+router.get('/login', usuariosControllerDb.login); 
 
 /*** Reestablecer contraseña usuario ***/ 
-router.get('/reestablecer', usuariosController.reestablecer); 
+router.get('/reestablecer', usuariosControllerDb.reestablecer); 
 
 /*** CREATE ONE USER ***/ 
-router.get('/create', usuariosController.create); 
+router.get('/create', usuariosControllerDb.create); 
+router.post('/', upload.any(), usuariosControllerDb.store); 
 
-const validaciones = [
-    body('first_name').notEmpty().withMessage('Debe completar su nombre.'),
-    body('last_name').notEmpty().withMessage('Debe completar su apellido.'),
-    body('email').notEmpty().withMessage('Email no valido.'),
-    body('phone').notEmpty().withMessage('Debe completar su teléfono.'),
-    body('password').notEmpty().withMessage('Debe completar su contraseña.')/* ,
-    body('image').notEmpty().withMessage('Debe subir un archivo válido.') */
-]
 
-router.post('/', [ upload.any() ] , validaciones , usuariosController.store); 
+//const validaciones = [
+    //body('first_name').notEmpty().withMessage('Debe completar su nombre.'),
+    //body('last_name').notEmpty().withMessage('Debe completar su apellido.'),
+    //body('email').notEmpty().withMessage('Email no valido.'),
+    //body('phone').notEmpty().withMessage('Debe completar su teléfono.'),
+    //body('password').notEmpty().withMessage('Debe completar su contraseña.')/* ,
+    //body('image').notEmpty().withMessage('Debe subir un archivo válido.') */
+   // ];
+  
+
+//router.post('/', [ upload.any() ] , validaciones , usuariosController.store); 
 
 
 /*** GET ONE USER ***/  
-router.get('/:id', usuariosController.detail);  
+router.get('/:id', usuariosControllerDb.detail);  
 
 /*** EDIT ONE USER ***/ 
-router.get('/edit/:id', usuariosController.edit); 
-router.patch('/edit/:id', upload.any(),usuariosController.update); 
+router.get('/edit/:id', usuariosControllerDb.edit); 
+router.patch('/edit/:id', upload.any(),usuariosControllerDb.update); 
 
 
 /*** DELETE ONE USER***/ 
-router.delete('/delete/:id', usuariosController.destroy); 
+router.delete('/delete/:id', usuariosControllerDb.destroy); 
 
 
 module.exports = router;

@@ -1,3 +1,5 @@
+const { production } = require("../config/config");
+
 module.exports = (sequelize, DataTypes) => {
     let alias = "User";
     let cols = {
