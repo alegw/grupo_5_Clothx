@@ -15,7 +15,16 @@ const controller = {
 
 	// Filtrado por Categoria
 	category: (req, res) => {
-	
+		db.Product.findAll({
+			where:{ category:req.params.category },
+			include:[{ association: "category"}]
+		})
+		.then(product => {
+			res.render('category', {
+				category,
+				product
+			});
+		})
 	},
 
 	// Detail - Detail from one product

@@ -31,7 +31,7 @@ router.post('/', upload.any(), productsControllerDb.store);
 router.get('/:id', productsControllerDb.detail); 
 
 /*** POR CATEGORIA ***/ 
-//router.get('/category/:category', productsController.category); 
+//router.get('/category/:category', productsControllerDb.category); 
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsControllerDb.edit); 

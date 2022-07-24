@@ -1,3 +1,5 @@
+const db = require("../database/models");
+
 const fs = require('fs');
 const path = require('path');
 
@@ -8,14 +10,35 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
  
 const controller = {
-	index: (req, res) => {
-		res.render('index', {products,
-			// visited,
-			// inSale,
-			toThousand
-		});
+	// index: (req, res) => {
+	// 	res.render('index', {products,
+	// 		// visited,
+	// 		// inSale,
+	// 		toThousand
+	// 	});
 		 
+	// },
+
+	index: (req, res) => {
+        db.Product.findAll()
+            .then(function(products){
+				console.log(req.session)
+                 res.render("index", {products:products});
+    
+            })
 	},
+
+
+	// search: (req, res) => {
+	// 	let search = req.query.keywords;
+	// 	let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
+	// 	res.render('results', { 
+	// 		products: productsToSearch, 
+	// 		search,
+	// 		toThousand,
+	// 	});
+	// },
+
 	search: (req, res) => {
 		let search = req.query.keywords;
 		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
@@ -25,6 +48,10 @@ const controller = {
 			toThousand,
 		});
 	},
+
+
+
+
 };
 
 module.exports = controller;

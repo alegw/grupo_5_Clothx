@@ -23,7 +23,12 @@ var upload = multer({storage: configuracion})
 router.get('/', usuariosControllerDb.index); 
 
 /*** Login usuarios ***/ 
-router.get('/login', usuariosControllerDb.login); 
+router.get('/login', usuariosControllerDb.login);
+router.post('/login', usuariosControllerDb.procesoLogin);
+router.get("/logout", usuariosControllerDb.logout);
+
+/*** Usuario administrador ***/ 
+router.get('/admin', usuariosControllerDb.admin); 
 
 /*** Reestablecer contraseña usuario ***/ 
 router.get('/reestablecer', usuariosControllerDb.reestablecer); 
@@ -31,6 +36,7 @@ router.get('/reestablecer', usuariosControllerDb.reestablecer);
 /*** CREATE ONE USER ***/ 
 router.get('/create', usuariosControllerDb.create); 
 router.post('/', upload.any(), usuariosControllerDb.store); 
+
 
 
 //const validaciones = [
