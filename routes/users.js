@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer')
 const path = require('path')
 const { body } = require ('express-validator')
+const validacionesUser = require("../middlewares/userValidations")
 
 // ************ Controller Require ************
 const usuariosControllerDb = require('../controllers/usuariosControllerDb');
@@ -35,21 +36,7 @@ router.get('/reestablecer', usuariosControllerDb.reestablecer);
 
 /*** CREATE ONE USER ***/ 
 router.get('/create', usuariosControllerDb.create); 
-router.post('/', upload.any(), usuariosControllerDb.store); 
-
-
-
-//const validaciones = [
-    //body('first_name').notEmpty().withMessage('Debe completar su nombre.'),
-    //body('last_name').notEmpty().withMessage('Debe completar su apellido.'),
-    //body('email').notEmpty().withMessage('Email no valido.'),
-    //body('phone').notEmpty().withMessage('Debe completar su teléfono.'),
-    //body('password').notEmpty().withMessage('Debe completar su contraseña.')/* ,
-    //body('image').notEmpty().withMessage('Debe subir un archivo válido.') */
-   // ];
-  
-
-//router.post('/', [ upload.any() ] , validaciones , usuariosController.store); 
+router.post('/', [ upload.any(), validacionesUser ], usuariosControllerDb.store); 
 
 
 /*** GET ONE USER ***/  

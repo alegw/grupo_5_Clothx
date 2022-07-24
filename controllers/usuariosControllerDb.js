@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const bcryptjs = require ('bcryptjs')
+const { validationResult } = require("express-validator");
 
 const controller = {
 	// Root - Show all Users
@@ -62,21 +63,37 @@ const controller = {
 
     // Create -  Method to store
     store: (req, res) => { 
-        let avatar;
-        if (req.files[0] != undefined){
-            avatar = req.files[0].filename
+
+        /* Pregunta si hay error en la validacion, si no hay pasa a guardar todo */
+
+        let resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+          res.render("usuario-create-form-db", {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
         } else {
-            avatar = 'default.jpg'
+             /* Si no tiene imagen que ponga una por defecto */
+            let avatar;
+            if (req.files[0] != undefined){
+                avatar = req.files[0].filename
+            } else {
+                avatar = 'default.jpg'
+            }
+
+            /* Hashea Contraseña */
+            req.body.password = bcryptjs.hashSync(req.body.password, 10);
+
+            /* Crea nuevo usuario en la BD */
+            let newUser = {
+             ...req.body,
+                avatar: avatar,
+            };    
+            db.User.create(newUser)
+            .then(()=>{
+                res.redirect("/")
+            })
         }
-        req.body.password = bcryptjs.hashSync(req.body.password, 10);
-        let newUser = {
-            ...req.body,
-            avatar: avatar,
-        };    
-        db.User.create(newUser)
-        .then(()=>{
-            res.redirect("/")
-        })
     },
 
         edit: (req, res) => {

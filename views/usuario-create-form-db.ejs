@@ -14,56 +14,55 @@
 
 					<form action="/users" method="POST" enctype="multipart/form-data">
 					<div class="campos">	
-								<label>Nombre</label>
-								<input type="text" name="name" id="" />
-								<!-- <% if (locals.errors && errors.first_name) { %>
-									<div class="errors">
-										<%= errors.first_name.msg %>
-									</div>
-								<% } %> -->
+						<label>Nombre</label>
+						<input type="text" name="first_name" id="" value = "<%= locals.oldData ? oldData.first_name : null %>"/>
+						<% if (locals.errors && errors.first_name) { %>
+							<div class="errors">
+								<%= errors.first_name.msg %>
+							</div>
+						<% } %>
 
-								<label>Apellido</label>
-								<input type="text" name="last_name" id="" value = "<%= locals.oldData ? oldData.last_name : null %>"/>
-								<!-- <% if (locals.errors && errors.last_name) { %>
-									<div class="errors">
-										<%= errors.last_name.msg %>
-									</div>
-								<% } %> -->
+						<label>Apellido</label>
+						<input type="text" name="last_name" id="" value = "<%= locals.oldData ? oldData.last_name : null %>"/>
+						<% if (locals.errors && errors.last_name) { %>
+							<div class="errors">
+								<%= errors.last_name.msg %>
+							</div>
+						<% } %>
 
-								<label>Email</label>
-								<input type="text" name="email" id=""/>
-								<!-- <% if (locals.errors && errors.email) { %>
-									<div class="errors">
-										<%= errors.email.msg %>
-									</div>
-								<% } %> -->
+						<label>Email</label>
+						<input type="text" name="email" id="" value = "<%= locals.oldData ? oldData.email : null %>"/>
+						<% if (locals.errors && errors.email) { %>
+							<div class="errors">
+								<%= errors.email.msg %>
+							</div>
+						<% } %>
 
-								<!-- <label>Teléfono</label>
-								<input type="text" name="phone" id="" value = "<%= locals.oldData ? oldData.phone : null %>"/>
-								<% if (locals.errors && errors.phone) { %>
-									<div class="errors">
-										<%= errors.phone.msg %>
-									</div>
-								<% } %> -->
+						<label>Teléfono</label>
+						<input type="text" name="phone" id="" value = "<%= locals.oldData ? oldData.phone : null %>"/>
+						<% if (locals.errors && errors.phone) { %>
+							<div class="errors">
+								<%= errors.phone.msg %>
+							</div>
+						<% } %>
 
-								<label>Contraseña</label>
-								<input type="text" name="password" id="">
-								<!-- <% if (locals.errors && errors.password) { %>
-									<div class="errors">
-										<%= errors.password.msg %>
-									</div>
-								<% } %> -->
+						<label>Contraseña</label>
+						<input type="text" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
+						<% if (locals.errors && errors.password) { %>
+							<div class="errors">
+								<%= errors.password.msg %>
+							</div>
+						<% } %>
 
 								
-
-								<div><label for="imageUser" class="smallHeader">Imagen de Perfil</label>
-									<input type="file" name="avatar" id="image" class="form-input"/>
-									<!-- <% if (locals.errors && errors.image) { %>
-										<div class="errors">
-											<%= errors.image.msg %>
-										</div>
-									<% } %> -->
+						<div><label for="avatar" class="smallHeader">Imagen de Perfil</label>
+							<input type="file" name="avatar" id="avatar" class="form-input" value = "<%= locals.oldData ? oldData.avatar : null %>"/>
+							<% if (locals.errors && errors.avatar) { %>
+								<div class="errors">
+									<%= errors.avatar.msg %>
 								</div>
+							<% } %>
+						</div>
 
 
                                 
