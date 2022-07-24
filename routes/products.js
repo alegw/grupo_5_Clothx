@@ -32,7 +32,7 @@ router.post('/', [ upload.any(), validacionesProductos ], productsControllerDb.s
 router.get('/:id', productsControllerDb.detail); 
 
 /*** POR CATEGORIA ***/ 
-//router.get('/category/:category', productsControllerDb.category); 
+router.get('/category/:category', productsControllerDb.category); 
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsControllerDb.edit); 

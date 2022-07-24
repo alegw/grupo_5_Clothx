@@ -1,4 +1,6 @@
 const db = require("../database/models");
+const sequelize = require("sequelize");
+const Op = sequelize.Op;
 
 const fs = require('fs');
 const path = require('path');
@@ -20,11 +22,9 @@ const controller = {
 	// },
 
 	index: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({limit:4})
             .then(function(products){
-				console.log(req.session)
-                 res.render("index", {products:products});
-    
+                res.render("index", {products:products});
             })
 	},
 
@@ -41,12 +41,16 @@ const controller = {
 
 	search: (req, res) => {
 		let search = req.query.keywords;
-		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-		res.render('results', { 
-			products: productsToSearch, 
-			search,
-			toThousand,
-		});
+		db.Product.findAll({where:{
+			name : {
+				[Op.like] : `%${search}%`
+			}
+		}}).then(products => {
+			res.render('results', { 
+				products, 
+				search,
+			});
+		})
 	},
 
 

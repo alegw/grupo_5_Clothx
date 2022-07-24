@@ -4,7 +4,7 @@ const db = require('../database/models');
 
 /*const validacionesUsuario = [*/
 const validacionesUser = [
-    body("first_name")
+    body("name")
         .notEmpty().withMessage("Debes introducir tu nombre").bail()
         .isLength({ min: 2 }).withMessage("tu nombre debe tener mínimo 2 letras")
         .isAlpha().withMessage("solo puede introducir letras"),

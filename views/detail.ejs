@@ -87,38 +87,16 @@
                 </div>
                 <h2 class="titulos">Productos relacionados</h2>
                 <div class="flexfotos">
-
-                    <div><a href="/products/2">
-                        <figure class="product-box_image">
-                          <img src="/img/products/Ropa2-2.png" alt="imagen de producto" style="max-width: 45%";>
-                        </figure>
-                        <div class="nombreProd">Short</div>
-                      </a>
-                      
-                    </div>
-                    <div><a href="/products/5">
-                        <figure class="product-box_image">
-                          <img src="/img/products/image-1658604266393.png" alt="imagen de producto" style="max-width: 45%";>
-                        </figure>
-                        <div class="nombreProd">Pollera Lisa</div>
-                      </a>
-                    </div>
-                    <div><a href="/products/6">
-                        <figure class="product-box_image">
-                          <img src="/img/products/image-1658604338131.png" alt="imagen de producto" style="max-width: 45%";>
-                        </figure>
-                        <div class="nombreProd">Pollera Azul</div>
-                      </a>
-                    </div>
-                    <div><a href="/products/7">
-                        <figure class="product-box_image">
-                          <img src="/img/products/image-1658604464466.png" alt="imagen de producto" style="max-width: 45%";>
-                        </figure>
-                        <div class="nombreProd">Camisa Rayas</div>
-                      </a>
-                    </div>
-                    
-
+                    <% productosRelacionados.forEach(producto => { %>
+                        <div>
+                            <a href="/products/<%=producto.dataValues.id%>">
+                                <figure class="product-box_image">
+                                    <img src="/img/products/<%=producto.dataValues.image%>" alt="imagen de producto" style="max-width: 45%";>
+                                </figure>
+                                <div class="nombreProd"><%=producto.dataValues.name%></div>
+                            </a>
+                        </div>
+                    <% }) %>    
                 </div>
             </main>
             <hr>

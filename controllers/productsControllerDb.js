@@ -18,26 +18,33 @@ const controller = {
 	// Filtrado por Categoria
 	category: (req, res) => {
 		db.Product.findAll({
-			where:{ category:req.params.category },
+			where:{ category_id : req.params.category},
 			include:[{ association: "category"}]
 		})
-		.then(product => {
-			res.render('category', {
-				category,
-				product
+		.then(products => {
+			res.render('results', {
+				search: req.params.category,
+				products
 			});
 		})
 	},
 
 	// Detail - Detail from one product
-	detail: (req, res) => {
-		db.Product.findOne({
-			where:{ id:req.params.id },
-			include:[{ association: "category"}]
-		})
-		.then(product => {
-			res.render("detail", {product});
-		})
+	detail: async (req, res) => {
+		try{
+			let product = await db.Product.findOne({
+				where:{ id:req.params.id },
+				include:[{ association: "category"}]
+			});
+			let productosRelacionados = await db.Product.findAll({
+				where: { category_id : product.dataValues.category_id},
+				include:[{ association: "category"}],
+				limit: 4
+			});
+			res.render("detail", {product, productosRelacionados});
+		} catch (e) {
+			console.log(e);
+		} 
 	},
 
 	// Create - Form to create
