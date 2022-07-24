@@ -12,40 +12,66 @@
           <h2 class="titulo">Crear publicacion de producto</h2>
 
           <div class="campos">
-            <label for="nombreProduct" class="smallHeader"> Nombre</label>
-            <input type="text" name="name" id="" />
-          </div>
-          <div class="campos">
-            <label for="description" class="smallHeader"> Descripcion de product</label>
-            <input type="text" name="description" id="" />
+            <label>Nombre del producto</label>
+						<input type="text" name="name" id="name" value = "<%= locals.oldData ? oldData.name : null %>"/>
+						<% if (locals.errors && errors.name) { %>
+							<div class="errors">
+								<%= errors.name.msg %>
+							</div>
+						<% } %>
           </div>
 
           <div class="campos">
-            <label for="imageProduct" class="smallHeader">Imagen</label><input type="file" name="image"
-              id="image" class="form-input">
+            <label>Descripcion del Producto</label>
+						<input type="text" name="description" id="description" value = "<%= locals.oldData ? oldData.description : null %>"/>
+						<% if (locals.errors && errors.description) { %>
+							<div class="errors">
+								<%= errors.description.msg %>
+							</div>
+						<% } %>
+          </div>
+
+          <div class="campos">
+            <label>Categoria del producto</label>
+						<input type="text" name="category" id="category" value = "<%= locals.oldData ? oldData.category : null %>"/>
+						<% if (locals.errors && errors.category) { %>
+							<div class="errors">
+								<%= errors.category.msg %>
+							</div>
+						<% } %>
+          </div>
+                  
+          <div class="campos">
+            <label>Color</label>
+						<input type="text" name="color" id="color" value = "<%= locals.oldData ? oldData.color : null %>"/>
+						<% if (locals.errors && errors.color) { %>
+							<div class="errors">
+								<%= errors.color.msg %>
+							</div>
+						<% } %>
+          </div>
+
+          <label>Precio</label>
+          <input type="text" name="price" id="price" value = "<%= locals.oldData ? oldData.price : null %>"/>
+          <% if (locals.errors && errors.price) { %>
+            <div class="errors">
+              <%= errors.price.msg %>
+            </div>
+          <% } %>
+
+          <div><label for="image" class="smallHeader">Imagen del Producto</label>
+            <input type="file" name="image" id="image"/>
           </div>
           
-          <div class="campos">
-            <label for="categoryProduct" class="smallHeader">Categoria</label><select name="category_id"
-              id="">
-              <% categories.forEach(category=> { %>
-                <option value=<%= category.id %> > <%=category.name%>
-                </option>
-                <% })%>
-            </select>
-          </div>
-          
-          <div class="campos">
-            <label for="description" class="smallHeader"> Color</label>
-            <input type="text" name="color" id="" />
-          </div>
-
-          <div class="campos">
-            <label for="precioProduct" class="smallHeader"> Precio</label>
-            <input type="number" name="price" id="" min="1" step="any" />
-          </div>
-
-
+          <!-- **CORREGIR VALIDACION** -->
+<!--           <div><label for="image" class="smallHeader">Imagen del Producto</label> 
+            <input type="file" name="image" id="image" class="form-input" value = "<%= locals.oldData ? oldData.image : null %>"/>
+            <% if (locals.errors && errors.image) { %>
+              <div class="errors">
+                <%= errors.image.msg %>
+              </div>
+            <% } %>
+          </div> -->
 
 
           <div class="campos">

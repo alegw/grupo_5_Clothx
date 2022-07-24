@@ -1,4 +1,6 @@
 const db = require("../database/models");
+const bcryptjs = require ('bcryptjs')
+const { validationResult } = require("express-validator");
 
 const controller = {
 	// Root - Show all products
@@ -48,31 +50,38 @@ const controller = {
 		
 
 	},
-	
-	// Create -  Method to store
-	store: (req, res) => {
-	
-		let image
-		console.log(req.files);
+		// Create -  Method to store
+	store: (req, res) => { 
+
+	/* Pregunta si hay error en la validacion, si no hay pasa a guardar todo */
+
+	let resultValidation = validationResult(req);
+	if (resultValidation.errors.length > 0) {
+	  res.render("product-create-form", {
+		errors: resultValidation.mapped(),
+		oldData: req.body,
+	  });
+	} else {
+		 /* Si no tiene imagen que ponga una por defecto */
+		let image;
 		if (req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
-			image = 'default-image.png'
+			image = 'default.jpg'
 		}
+
+		/* Crea nuevo producto en la BD */
 		let newProduct = {
 			...req.body,
 			image: image,
-			
-		};
-		
+		};    
 		db.Product.create(newProduct)
 		
 		.then(()=>{
 			res.redirect("/")
 		})
-
-
-	},
+	}
+},
 
 	// Update - Form to edit
 	edit: async (req, res) => {
