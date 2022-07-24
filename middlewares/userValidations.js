@@ -2,7 +2,8 @@ const { body } = require('express-validator');
 const path = require("path");
 const db = require('../database/models');
 
-const validacionesUsuario = [
+/*const validacionesUsuario = [*/
+const validacionesUser = [
     body("first_name")
         .notEmpty().withMessage("Debes introducir tu nombre").bail()
         .isLength({ min: 2 }).withMessage("tu nombre debe tener mínimo 2 letras")
@@ -26,9 +27,9 @@ const validacionesUsuario = [
             });
         }),
     
-    body('phone')
+    /*body('phone')
         .notEmpty().withMessage("Debes introducir un numero telefónico")
-        .isNumeric().withMessage("Solo puede ingresar caracteres numericos"),
+        .isNumeric().withMessage("Solo puede ingresar caracteres numericos"), */
     
     body('password')
         .notEmpty().withMessage("Debes introducir una contraseña")
@@ -60,4 +61,5 @@ const validacionesUsuario = [
         })
 ];
 
-module.exports = validacionesUsuario;
+module.exports = validacionesUser
+/*module.exports = validacionesUsuario;*/

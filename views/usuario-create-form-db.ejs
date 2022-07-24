@@ -15,7 +15,7 @@
 					<form action="/users" method="POST" enctype="multipart/form-data">
 					<div class="campos">	
 						<label>Nombre</label>
-						<input type="text" name="first_name" id="" value = "<%= locals.oldData ? oldData.first_name : null %>"/>
+						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.first_name : null %>"/>
 						<% if (locals.errors && errors.first_name) { %>
 							<div class="errors">
 								<%= errors.first_name.msg %>
@@ -38,13 +38,13 @@
 							</div>
 						<% } %>
 
-						<label>Teléfono</label>
+						<!-- <label>Teléfono</label>
 						<input type="text" name="phone" id="" value = "<%= locals.oldData ? oldData.phone : null %>"/>
 						<% if (locals.errors && errors.phone) { %>
 							<div class="errors">
 								<%= errors.phone.msg %>
 							</div>
-						<% } %>
+						<% } %> -->
 
 						<label>Contraseña</label>
 						<input type="text" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
