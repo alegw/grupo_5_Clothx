@@ -13,9 +13,11 @@ const validacionesProductos = [
     
     body("color")
        .notEmpty().withMessage("Debes introducir un color"),
-     
-    body("category")
+    
+   
+    body("category_id")
        .notEmpty().withMessage("Debes introducir una categoria del producto"), 
+   
 
     body("price")
       .notEmpty().withMessage("Debes introducir un precio")

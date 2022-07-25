@@ -48,25 +48,21 @@ const controller = {
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
-		db.Category.findAll()
-		.then(categories => {
-			res.render('product-create-form', {categories})
-		}) 
-
-		
-
+	create: async (req, res) => {
+		let categories = await db.Category.findAll();
+		res.render('product-create-form', {categories})
 	},
 		// Create -  Method to store
-	store: (req, res) => { 
+	store: async (req, res) => { 
 
 	/* Pregunta si hay error en la validacion, si no hay pasa a guardar todo */
-
+	let categories = await db.Category.findAll();
 	let resultValidation = validationResult(req);
 	if (resultValidation.errors.length > 0) {
 	  res.render("product-create-form", {
 		errors: resultValidation.mapped(),
 		oldData: req.body,
+		categories
 	  });
 	} else {
 		 /* Si no tiene imagen que ponga una por defecto */

@@ -27,6 +27,12 @@
             <% if(locals.userLogged) { %>
                 <a href="/users/logout"> Cerrar sesión </a>
                 <div><%=locals.userLogged.name%></div>
+               
+                    <img src="/img/usuarios/<%= locals.userLogged.avatar %>" alt="imagen de usuario"
+                        style="max-width: 5%" ;>
+                
+
+
             <% } %>
             <a href="/users/login"><div class="perfil-icono"><i class="fas fa-user-circle"></i></div></a>
         </div>

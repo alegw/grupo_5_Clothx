@@ -22,7 +22,7 @@ const controller = {
 	// },
 
 	index: (req, res) => {
-        db.Product.findAll({limit:4})
+        db.Product.findAll({limit:8})
             .then(function(products){
                 res.render("index", {products:products});
             })

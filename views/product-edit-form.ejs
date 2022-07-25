@@ -1,70 +1,78 @@
-<!DOCTYPE html><!--EN USO-->
+<!DOCTYPE html>
+<!--EN USO-->
 <html lang="en">
-    <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
-  <%- include("./partials/head") %>
+<link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<%- include("./partials/head") %>
+
   <body>
     <%- include("./partials/header") %>
-    
-      <main></main>
+
+      <main>
       <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-    <div class="caja-form">
-      <h2 class="titulo">Editar publicacion de producto</h2>
+        <div class="caja-form">
+          <h2 class="titulo">Editar publicacion de producto</h2>
 
-      <div class="campos">
-        <label for="nombreProduct" class="smallHeader"> Nombre</label>
-        <input type="text" name="name" id="" value="<%= productToEdit.name %>">
-         
-      </div>
+          <div class="campos">
+            <label for="nombreProduct" class="smallHeader"> Nombre</label>
+            <input type="text" name="name" id="" value="<%= productToEdit.name %>">
 
-       
+          </div>
 
 
-      <div class="campos">
-        <label for="description" class="smallHeader"> Descripcion</label>
-        <input type="text" name="description" id="" value="<%= productToEdit.description %>"/>
-      </div>
-       <div class="campos">
-        <label for="imageProduct" class="smallHeader">Imagen</label
-        ><input type="file" name="image" accept="jpg, jpeg" multiple />
-      </div> 
 
-      
-      <h6>Categoria Actual</h6>
-      <p><%= productToEdit.category %></p>
-      <div class="campos">
-        <label for="categoryProduct" class="smallHeader"></label
-        ><select name="category_id" id="">
-          <% categories.forEach(category=> { %>
-            <option value=<%= category.id %> > <%=category.name%>
-            </option>
-            <% })%>
+
+          <div class="campos">
+            <label for="description" class="smallHeader"> Descripcion</label>
+            <input type="text" name="description" id="" value="<%= productToEdit.description %>" />
+          </div>
+          <div class="campos">
+            <label for="imageProduct" class="smallHeader">Imagen</label><input type="file" name="image"
+              accept="jpg, jpeg" multiple />
+          </div>
+
+
           
+          <h6>Categoria Actual</h6>
+          <p>
+            <%= productToEdit.category %>
+          </p>
+          <div class="campos">
+            <label for="categoryProduct" class="smallHeader"></label><select name="category_id" id="">
+              <% categories.forEach(category=> { %>
+                <option value=<%=category.id %> > <%=category.name%>
+                </option>
+              <% })%>
+
+            </select>
+          </div>
 
 
-        </select>
-      </div>
-
-    
-      <div class="campos">
-        <label for="precioProduct" class="smallHeader"> Precio</label>
-        <input type="number" name="price" id="" value=<%= productToEdit.price %> >
-      </div>
 
 
-      <div class="campos">
-        <label for="description" class="smallHeader"> Color</label>
-        <input type="text" name="color" id="" value=<%= productToEdit.color %>>
-      </div>
+
+          <div class="campos">
+            <label for="precioProduct" class="smallHeader"> Precio</label>
+            <input type="number" name="price" id="" value=<%=productToEdit.price %> >
+          </div>
 
 
-      
-      <div class="campos">
-        
-        <button type="submit" class="crear">Guardar Cambios</button>
+          <div class="campos">
+            <label for="description" class="smallHeader"> Color</label>
+            <input type="text" name="color" id="" value=<%=productToEdit.color %>>
+          </div>
 
-    </div>
-    
-  </form>
-  <%- include("./partials/footer") %>
-</body>
+
+
+          <div class="campos">
+
+            <button type="submit" class="crear">Guardar Cambios</button>
+
+          </div>
+
+      </form>
+      <%- include("./partials/footer") %>
+
+    </main>
+  </body>
+
 </html>

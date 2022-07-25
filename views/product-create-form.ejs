@@ -31,15 +31,27 @@
 						<% } %>
           </div>
 
-          <div class="campos">
+          
+            <div class="campos">
             <label>Categoria del producto</label>
-						<input type="text" name="category" id="category" value = "<%= locals.oldData ? oldData.category : null %>"/>
-						<% if (locals.errors && errors.category) { %>
-							<div class="errors">
-								<%= errors.category.msg %>
-							</div>
-						<% } %>
+            <select name="category_id">
+              <% categories.forEach( category=> { %>
+                <option value=<%= category.dataValues.id %> > <%=category.dataValues.name%> </option>
+              <% })%>
+            </select>
+            
+              <% if (locals.errors && errors.category) { %>
+                <div class="errors">
+                  <%= errors.category.msg %>
+                </div>
+              <% } %>
+            
           </div>
+        
+
+
+
+     
                   
           <div class="campos">
             <label>Color</label>

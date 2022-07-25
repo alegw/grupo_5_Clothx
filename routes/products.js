@@ -25,7 +25,7 @@ router.get('/', productsControllerDb.index);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsControllerDb.create); 
-router.post('/', [ upload.any(), validacionesProductos ], productsControllerDb.store); 
+router.post('/',  upload.any(), validacionesProductos , productsControllerDb.store); 
 
 
 /*** GET ONE PRODUCT ***/ 
