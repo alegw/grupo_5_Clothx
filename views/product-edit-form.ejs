@@ -8,71 +8,63 @@
     <%- include("./partials/header") %>
 
       <main>
-      <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-        <div class="caja-form">
-          <h2 class="titulo">Editar publicacion de producto</h2>
+        <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+          <div class="caja-form">
+            <h2 class="titulo">Editar publicacion de producto</h2>
 
-          <div class="campos">
-            <label for="nombreProduct" class="smallHeader"> Nombre</label>
-            <input type="text" name="name" id="" value="<%= productToEdit.name %>">
+            <div class="campos">
+              <label for="nombreProduct" class="smallHeader"> Nombre</label>
+              <input type="text" name="name" id="" value="<%= productToEdit.name %>">
 
-          </div>
-
-
+            </div>
 
 
-          <div class="campos">
-            <label for="description" class="smallHeader"> Descripcion</label>
-            <input type="text" name="description" id="" value="<%= productToEdit.description %>" />
-          </div>
-          <div class="campos">
-            <label for="imageProduct" class="smallHeader">Imagen</label><input type="file" name="image"
-              accept="jpg, jpeg" multiple />
-          </div>
+            <div class="campos">
+              <label for="description" class="smallHeader"> Descripcion</label>
+              <input type="text" name="description" id="" value="<%= productToEdit.description %>" />
+            </div>
+            <div class="campos">
+              <label for="imageProduct" class="smallHeader">Imagen</label><input type="file" name="image"
+                accept="jpg, jpeg" multiple />
+            </div>
+
+            <h6>Categoria Actual</h6>
+            <p>
+              <%= productToEdit.category %>
+            </p>
+            <div class="campos">
+              <label for="categoryProduct" class="smallHeader"></label><select name="category_id" id="">
+                <% categories.forEach(category=> { %>
+                  <option value=<%=category.id %> > <%=category.name%>
+                  </option>
+                  <% })%>
+
+              </select>
+            </div>
 
 
-          
-          <h6>Categoria Actual</h6>
-          <p>
-            <%= productToEdit.category %>
-          </p>
-          <div class="campos">
-            <label for="categoryProduct" class="smallHeader"></label><select name="category_id" id="">
-              <% categories.forEach(category=> { %>
-                <option value=<%=category.id %> > <%=category.name%>
-                </option>
-              <% })%>
-
-            </select>
-          </div>
+            <div class="campos">
+              <label for="precioProduct" class="smallHeader"> Precio</label>
+              <input type="number" name="price" id="" value=<%=productToEdit.price %> >
+            </div>
 
 
+            <div class="campos">
+              <label for="description" class="smallHeader"> Color</label>
+              <input type="text" name="color" id="" value=<%=productToEdit.color %>>
+            </div>
 
 
+            <div class="campos">
 
-          <div class="campos">
-            <label for="precioProduct" class="smallHeader"> Precio</label>
-            <input type="number" name="price" id="" value=<%=productToEdit.price %> >
-          </div>
+              <button type="submit" class="crear">Guardar Cambios</button>
 
+            </div>
 
-          <div class="campos">
-            <label for="description" class="smallHeader"> Color</label>
-            <input type="text" name="color" id="" value=<%=productToEdit.color %>>
-          </div>
+        </form>
+        <%- include("./partials/footer") %>
 
-
-
-          <div class="campos">
-
-            <button type="submit" class="crear">Guardar Cambios</button>
-
-          </div>
-
-      </form>
-      <%- include("./partials/footer") %>
-
-    </main>
+      </main>
   </body>
 
 </html>

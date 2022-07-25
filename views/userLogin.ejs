@@ -12,21 +12,20 @@
 
         <h2 class="titulo">¡Hola! <br> Ingresá tu usuario y contraseña</h2>
 
+          <form action="/users/login" method="POST">
+            <div class="campos">
+              <label for="nombre"> Email</label>
+              <input type="text" name="email" id="">
+            </div>
+            <div class="campos">
+              <label for="nombre"> Contraseña</label>
+              <input type="password" name="password" id="">
+            </div>
+            <div class="campos">
+              <input class="boton" type="submit">
+            </div>
+          </form>
 
-        <form action="/users/login" method="POST">
-          <div class="campos">
-            <label for="nombre"> Email</label>
-            <input type="text" name="email" id="">
-          </div>
-          <div class="campos">
-            <label for="nombre"> Contraseña</label>
-            <input type="password" name="password" id="">
-          </div>
-          <div class="campos">
-            <input class="boton" type="submit">
-          </div>
-        </form>
-        
         <div class="olvide-y-crear">
           <a href="/users/reestablecer">
             <p class="letra-olvide">Olvide mi contraseña</p>

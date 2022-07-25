@@ -26,22 +26,17 @@
           <li><i class="fas fa-shopping-cart"></i></li>
           <li><a href="/users/login"><div class="perfil-icono"><i class="fas fa-user-circle"></i></div></a></li>
           
-    
-    
+
           <% if(locals.userLogged && locals.userLogged.category == 1) { %>
-            
             <li> <a href="/users/admin">Panel de Administracion</a></li>
-     
           <% } %>
     
     
           <% if(locals.userLogged) { %>
-            <li> <img class="avatar" src="/img/usuarios/<%= locals.userLogged.avatar %>" alt="imagen de usuario"></li> 
+           <li><img class="avatar" src="/img/usuarios/<%= locals.userLogged.avatar %>" alt="imagen de usuario"></li> 
            <li><div class="nombre-usuario"><%=locals.userLogged.name%></div></li>
-             
            <li> <a href="/users/logout"> Cerrar sesión </a></li>
-           
-        <% } %>
+          <% } %>
     
         
     

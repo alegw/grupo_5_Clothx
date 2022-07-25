@@ -1,147 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
+
+<%- include("./partials/head") %>
+
   <!-- Head -->
 
-  <%- include("./partials/head") %>
-
-  <!-- Head -->
-<body>
-  <!-- Header -->
-
- 
-
+  <body>
   
+    <main>
 
-<!-- Banner -->
-
-
-
-<!-- Main -->
-
-      <main>
-
-
-
-        <%- include("./partials/header") %>
+      <%- include("./partials/header") %>
 
         <img class="Banner" src="/img/Banner.jpg" width="100%">
 
-         
-      
-        
+        <div>
+          <div class="container products-wrapper">
 
+            <div>
+              <h2 class="titulo">Destacados de la semana</h2>
+              <div class="container products-wrapper">
+                <div class="row">
 
+                  <% products.forEach(function(product){%>
+                    <div class="col-12 col-sm-6 col-lg-3">
 
+                      <section class="product-box">
+                        <a href="/products/<%= product.id %>">
+                          <figure class="product-box_image">
+                            <img src="/img/products/<%= product.image %>" alt="imagen de producto"
+                              style="max-width: 100%" ;>
+                          </figure>
+                          <article class="product-box_data">
+                            <div>
+                              <div class="nombreProd">
+                                <%= product.name %>
+                              </div>
+                              <br>
+                              <div class="precioProd"> $ <%= product.price %>
+                              </div>
+                            </div>
+                          </article>
+                        </a>
+                      </section>
+                    </div>
+                    <% }) %>
 
-
-			<div>
-				<div class="container products-wrapper">
-			 
-				 
-
-          <div>
-            <h2 class="titulo">Destacados de la semana</h2>
-            <div class="container products-wrapper">
-            <div class="row">
-              
-
-              <div class="col-12">
-               </div>
-    
-              <% products.forEach(function(product){%>
-                <div class="col-12 col-sm-6 col-lg-3">
-                  <section class="product-box">
-                    <a href="/products/<%= product.id %>">
-                      <figure class="product-box_image">
-                        <img src="/img/products/<%= product.image %>" alt="imagen de producto" style="max-width: 100%";>
-                      </figure>
-                      <article class="product-box_data">
-                        <div>
-                          <div class="nombreProd"><%= product.name %></div>
-                          <br>
-                          <div class="precioProd"> $ <%= product.price %></div>	
-                        </div>
-    
-                      </article>
-                    </a>
-                  </section>
                 </div>
-                <% }) %>
-    
-            </div>
-          </div>
-    
+              </div>
 
 
-        <h2 class="titulo"> Ver Productos por Categoría</h2>
-        <section class="col-12">
-          
-          <article class="categorias-main">
 
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/2"> <img src="/img/category/polleras.png" alt=""> <h4>Polleras</h4></a></div>
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/3"> <img src="/img/category/pantalon.png" alt=""> <h4>Pantalones</h4></a></div>
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/4"> <img src="/img/category/remeras.png" alt=""> <h4>Remeras</h4></a></div>
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/5"> <img src="/img/category/camisas.png" alt=""> <h4>Camisas</h4></a> </div>
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/6"> <img src="/img/category/sweater.png" alt=""><h4>Sweaters</h4></a> </div>
-            <div  class="icono-categoria col-lg-2 col-sm-6" > <a href="/products/category/7"> <img src="/img/category/accesorios.png" alt=""> <h4>Accesorios</h4></a></div>
+              <h2 class="titulo"> Ver Productos por Categoría</h2>
+              <section class="col-12">
 
-          
-          </article>
-          
+                <article class="categorias-main">
 
-        </section>
-        <br><br>
-        <section class="col-12 caja-vermas">
-          
-          <h2 class="botonuno"> <a href="/products/" style="color: white;">  Ver todos los productos </a></h2>
-          
-        </section>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/2"> <img
+                        src="/img/category/polleras.png" alt="">
+                      <h4>Polleras</h4>
+                    </a></div>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/3"> <img
+                        src="/img/category/pantalon.png" alt="">
+                      <h4>Pantalones</h4>
+                    </a></div>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/4"> <img
+                        src="/img/category/remeras.png" alt="">
+                      <h4>Remeras</h4>
+                    </a></div>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/5"> <img
+                        src="/img/category/camisas.png" alt="">
+                      <h4>Camisas</h4>
+                    </a> </div>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/6"> <img
+                        src="/img/category/sweater.png" alt="">
+                      <h4>Sweaters</h4>
+                    </a> </div>
+                  <div class="icono-categoria col-lg-2 col-sm-6"> <a href="/products/category/7"> <img
+                        src="/img/category/accesorios.png" alt="">
+                      <h4>Accesorios</h4>
+                    </a></div>
+
+
+                </article>
+
+
+              </section>
+              <br><br>
+              <section class="col-12 caja-vermas">
+
+                <h2 class="botonuno"> <a href="/products/" style="color: white;"> Ver todos los productos </a></h2>
+
+              </section>
 
     </main>
 
     <br><br><br>
 
-<!-- Banner inferiror -->
+    <!-- Banner inferior -->
 
     <img class="Banner-inferior" src="/img/Banner inferior.jpg" width="100%">
 
- 
-<!-- Slider -->
 
-<div class="somos">
-  <div class="col-lg-6">
-      <div class="slider ">
-        <ul>
-          <li>
-            <img src="/img/p1.jpg">
-          </li>
-          <li>
-            <img src="/img/p2.jpg">
-          </li>
-          <li>
-            <img src="/img/p3.jpg">
-          </li>
-        </ul>      
+    <!-- Slider -->
+
+    <div class="somos">
+      <div class="col-lg-6">
+        <div class="slider ">
+          <ul>
+            <li>
+              <img src="/img/p1.jpg">
+            </li>
+            <li>
+              <img src="/img/p2.jpg">
+            </li>
+            <li>
+              <img src="/img/p3.jpg">
+            </li>
+          </ul>
+        </div>
       </div>
-  </div>
-    
-  <div class="col-lg-6">
-    <div class="tipo-texto">Somos una empresa dedicada a la venta online de indumentaria para todos los públicos. Cada persona es única y nos encanta que su ropa lo sea también, por eso es que seleccionamos cada prenda pensando en nuestros posibles clientes. </div>
-  </div>
-</div>
+
+      <div class="col-lg-6">
+        <div class="tipo-texto">Somos una empresa dedicada a la venta online de indumentaria para todos los públicos.
+          Cada persona es única y nos encanta que su ropa lo sea también, por eso es que seleccionamos cada prenda
+          pensando en nuestros posibles clientes. </div>
+      </div>
+    </div>
 
 
+    <!-- footer -->
 
- 
+    <%- include("./partials/footer") %>
 
+  </body>
 
-   
-
-<!-- footer -->
-
-  <%- include("./partials/footer") %>
-
-</body>
 </html>
-
- 
