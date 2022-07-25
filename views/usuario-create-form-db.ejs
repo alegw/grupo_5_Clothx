@@ -1,6 +1,7 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
 <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<script src="/js/registerValidations.js"></script>
 <%- include("./partials/head") %>
 
 	<body>
@@ -17,7 +18,7 @@
 					</div>
 					<div class="campos">	
 						<label>Nombre</label>
-						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.first_name : null %>"/>
+						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.name : null %>"/>
 						<% if (locals.errors && errors.name) { %>
 							<div class="errors">
 								<%= errors.name.msg %>
