@@ -6,12 +6,12 @@ const db = require('../database/models');
 const validacionesUser = [
     body("name")
         .notEmpty().withMessage("Debes introducir tu nombre").bail()
-        .isLength({ min: 2 }).withMessage("tu nombre debe tener mínimo 2 letras")
-        .isAlpha().withMessage("solo puede introducir letras"),
+        .isLength({ min: 2 }).withMessage("Tu nombre debe tener mínimo 2 letras")
+        .isAlpha().withMessage("Solo puede introducir letras"),
     
     body("last_name")
         .notEmpty().withMessage("Debes introducir tu apellido").bail()
-        .isLength({ min: 2 }).withMessage("tu apellido debe tener mínimo 2 letras")
+        .isLength({ min: 2 }).withMessage("Tu apellido debe tener mínimo 2 letras")
         .isAlpha().withMessage("solo puede introducir letras"),
 
     body('email')

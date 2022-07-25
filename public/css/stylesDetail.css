@@ -2,6 +2,14 @@ body {
     background-color: rgb(236, 236, 236);
 }
 
+
+h4{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    color: #242424;
+}
 .main1 {
     display: flex;
     flex-direction: row;
@@ -46,11 +54,16 @@ footer {
 
 }
 
-.titulos {
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center; 
-    color: #0F80A4;
-}
+.nombreProd-detalle{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+    color: #242424;
+    margin: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+ }
 
 .titulo2 {
     font-size: 20px;
@@ -58,8 +71,12 @@ footer {
 }
 
 .precio {
-    color: green;
-    font-size: 25px;
+font-family: 'Quicksand', sans-serif;
+   font-weight: 500;
+   font-size: 40px;
+   text-decoration: none;
+   color: #242424;
+   margin-bottom: 0px;
 }
 
 .boton {
@@ -68,6 +85,24 @@ footer {
     animation-name: color1;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
+}
+
+
+.imagen-producto-detalle{
+    text-align: right;
+}
+
+.relacionados{
+    font-family: 'Quicksand', sans-serif;
+   font-weight: 500;
+   font-size: 26px;
+   text-decoration: none;
+   color: #242424;
+   margin-bottom: 10px;
+}
+
+.prod-relacionado{
+    max-width: 250px;
 }
 
 @keyframes color {
@@ -82,7 +117,6 @@ footer {
 
 .flexfotos {
     text-align: center;
-    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;

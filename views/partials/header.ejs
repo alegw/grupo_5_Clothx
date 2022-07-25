@@ -1,40 +1,57 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
+
+
 <header>
-    <div class="top-header">
-        <div class="imagen-header-logo">
+    <section class="top-nav">
+        <div>
             <a href="/"><img class="imagen-logo" src="/img/Logo.png" alt=""  /></a>
         </div>
 
-
-        <!-- <form action="POST">
-            <div class="lupita">
-                <input class="campo" type="text" placeholder="Buscar productos, marcas"><i
-                    class="fas fa-search"></i>
-                </div>
-        </form> -->
-
-        <form action="/search" method="GET" class="search-form">
-            <div class="lupita">
-            <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
-            <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+        <div>
+            <form action="/search" method="GET" class="search-form">
+                <div class="lupita">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </div>
+            </form>
         </div>
-        </form>
-
-        <div class="botones">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><i class="fas fa-heart"></i></li>
+          <li><i class="fas fa-shopping-cart"></i></li>
+          <li><a href="/users/login"><div class="perfil-icono"><i class="fas fa-user-circle"></i></div></a></li>
+          
+    
+    
+          <% if(locals.userLogged && locals.userLogged.category == 1) { %>
             
-            <div class="favoritos-icono"><i class="fas fa-heart"></i></div>
-            <a href="/productCart"><div class="carrito-icono"><i class="fas fa-shopping-cart"></i></div></a>
-            
-            <% if(locals.userLogged) { %>
-                <a href="/users/logout"> Cerrar sesión </a>
-                <div><%=locals.userLogged.name%></div>
-               
-                    <img src="/img/usuarios/<%= locals.userLogged.avatar %>" alt="imagen de usuario"
-                        style="max-width: 5%" ;>
-                
+            <li> <a href="/users/admin">Panel de Administracion</a></li>
+     
+          <% } %>
+    
+    
+          <% if(locals.userLogged) { %>
+            <li> <img class="avatar" src="/img/usuarios/<%= locals.userLogged.avatar %>" alt="imagen de usuario"></li> 
+           <li><div class="nombre-usuario"><%=locals.userLogged.name%></div></li>
+             
+           <li> <a href="/users/logout"> Cerrar sesión </a></li>
+           
+        <% } %>
+    
+        
+    
+    
+        </ul>
+      </section>
+
+      
 
 
-            <% } %>
-            <a href="/users/login"><div class="perfil-icono"><i class="fas fa-user-circle"></i></div></a>
-        </div>
-    </div>
+      
+    
 </header>

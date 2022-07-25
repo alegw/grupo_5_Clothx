@@ -32,7 +32,12 @@ const controller = {
             if(verificarPassword){
                 delete user.password; // Eliminamos del usuario encontrado la prop contraseña (no de la base de datos)
                 req.session.userLogeado = user; // Guardamos en session la info del usuario
-                res.redirect("/");
+                if(req.session.userLogeado.category == 1) {
+                    res.redirect("/users/admin");
+                } else {
+                    res.redirect("/");
+                }
+
             } else {
                 res.redirect("/users/login");
             }
@@ -55,6 +60,7 @@ const controller = {
     admin: (req, res) => {
         res.render("administrador");
       },
+    
 
     // Create - Form to create
     create: (req, res) => {

@@ -15,10 +15,21 @@
             <hr>
             <main>
 
+                			
+<br>
+<div class="container admin">
+    <h2>Bienvenido <%=locals.userLogged.name%></h2> <br>
+    <h2 class="botonuno"> <a href="/products/create" style="color: white;">  Cargar producto </a></h2>
+    <h2 class="botonuno"> <a href="/products" style="color: white;"> Ver todos los productos </a></h2>
+    <h2 class="botonuno"> <a href="/users" style="color: white;"> Ver usuarios </a></h2>
+  </div>
+
+<br>
+
                 <div class="container products-wrapper">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="products-title">Listado de usuarios</h2>
+                            <h2>Listado de usuarios registrados</h2>
                         </div>
 
                         <% users.forEach(function(user){ %>

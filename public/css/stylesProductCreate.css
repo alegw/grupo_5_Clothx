@@ -1,5 +1,5 @@
 .caja-form{
-    width: 300px;
+    /*width: 300px;*/
     background-color: white;
     padding: 15px;
     border-radius: 15px;
@@ -37,3 +37,17 @@
 .errors{
     color: red
 }
+
+@media (min-width: 1000px) {
+    .caja-form{
+        width: 500px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    
+    }
+ }
