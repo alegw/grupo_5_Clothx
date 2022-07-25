@@ -1,11 +1,12 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
 <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<script src="../public/js/productsValidations.js"></script>
 <%- include("./partials/head") %>
 
   <body>
     <%- include("./partials/header") %>
-      <form action="/products" method="POST" enctype="multipart/form-data">
+      <form action="/products" method="POST" enctype="multipart/form-data" class="reservation2" >
 
        
 <br>  
@@ -18,6 +19,10 @@
         
         <div class="caja-form">
           <h2 class="titulo">Crear publicacion de producto</h2>
+          
+          <div class= "errores">
+						<ul></ul>
+					</div>
 
           <div class="campos">
             <label>Nombre del producto</label>
@@ -56,10 +61,7 @@
             
           </div>
         
-
-
-
-     
+   
                   
           <div class="campos">
             <label>Color</label>

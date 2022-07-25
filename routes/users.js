@@ -5,6 +5,7 @@ const multer = require('multer')
 const path = require('path')
 const { body } = require('express-validator')
 const validacionesUser = require("../middlewares/userValidations")
+const validacionesLogin = require("../middlewares/userLogin")
 const adminMiddleware = require("../middlewares/adminMiddleware");
 // ************ Controller Require ************
 const usuariosControllerDb = require('../controllers/usuariosControllerDb');
@@ -25,7 +26,7 @@ router.get('/', usuariosControllerDb.index);
 
 /*** Login usuarios ***/
 router.get('/login', usuariosControllerDb.login);
-router.post('/login', usuariosControllerDb.procesoLogin);
+router.post('/login', [validacionesLogin], usuariosControllerDb.procesoLogin);
 router.get("/logout", usuariosControllerDb.logout);
 
 /*** Usuario administrador ***/
