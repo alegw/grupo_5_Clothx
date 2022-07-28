@@ -1,4 +1,3 @@
-window.addEventListener('load', function(){
     let formulario = document.querySelector("form.reservation");
 
     formulario.addEventListener("submit", function(e){
@@ -56,4 +55,3 @@ window.addEventListener('load', function(){
         }
 
     })
-})

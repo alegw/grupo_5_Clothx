@@ -25,6 +25,14 @@ const controller = {
     },
 
     procesoLogin: async (req, res) => {
+        let resultValidation2 = validationResult(req);
+        if (resultValidation2.errors.length > 0) {
+          res.render("userLogin", {
+            errors: resultValidation2.mapped(),
+            oldData: req.body,
+          });
+        } else {
+
         console.log(req.body)
         let user = await db.User.findOne({where: {email : req.body.email}});
         if(user != null){ // Si existe el usuario
@@ -44,7 +52,8 @@ const controller = {
         } else {
             res.redirect("/users/login");
         }
-    },
+    }
+},
     logout: (req, res) => {
         delete req.session.userLogeado;
         res.locals.isLogged = false;

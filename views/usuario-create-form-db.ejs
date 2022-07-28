@@ -13,7 +13,7 @@
 					<h2 class="titulo">¡Te damos la bienvenida a Clothx!</h2>
 					<h3>Creá tu cuenta!</h3>
 					
-					<div class= "errors">
+					<div class= "errores">
 						<ul></ul>
 					</div>
 
@@ -53,7 +53,7 @@
 						<% } %> -->
 
 						<label>Contraseña</label>
-						<input type="text" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
+						<input type="password" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
 						<% if (locals.errors && errors.password) { %>
 							<div class="errors">
 								<%= errors.password.msg %>
