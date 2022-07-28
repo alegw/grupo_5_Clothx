@@ -1,10 +1,10 @@
-    let formulario = document.querySelector("form.reservation");
+    let formulario = document.getElementById("formulario");
 
     formulario.addEventListener("submit", function(e){
         let errores = [];
 
         /* ERRORES CAMPO NOMBRE */
-        let inputName = document.getElementById("name");
+        let inputName = document.getElementById("input.name");
         if (inputName.value == "") {
             errores.push("Debes introducir un nombre ");
         }else if (inputName.value < 2){

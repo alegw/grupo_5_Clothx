@@ -24,15 +24,15 @@
                     <div class="col-12 col-lg-3">
                         <div class="titulos">
                             <h2>
-                                <%= user.name %>
+                                <p>Usuario: <%= user.name %> </p>
                             </h2>
                             <br>
                         </div>
                         <section>
                             <h4>Informacion de Usuario</h4>
                             <div>
-                                <%= user.first_name %>
-                                    <%= user.last_name %>
+                                <p>Nombre: <%= user.name %> </p>
+                                <p>Apellido: <%= user.last_name %> </p>
                             </div>
                             <br>
 
@@ -42,22 +42,22 @@
                                 </div>
 
                         </section>
-                        <div>
+                      <!--   <div>
                             <h4> Teléfono: </h4>
                         </div>
                         <div>
                             <%= user.phone%>
-                        </div>
+                        </div> -->
                         <br>
-                        <br> <br><br><br>
-                        <button><a href="/users/edit/<%= user.id %>" class="action-button edit">EDITAR
+                        <br> <br>
+                        <button><a href="/users/edit/<%= user.id %>" class="botonuno action-button editt">EDITAR
                                 USUARIO</a></button>
 
                         <br><br><br>
 
                         <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST"
                             style="display: inline-flex">
-                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                            <button type="submit" class="botonuno action-button edit">ELIMINAR</button>
                         </form>
 
                         <br>

@@ -37,6 +37,12 @@
 .errors{
     color: red
 }
+.errores{
+    color: red
+}
+
+.reservation{
+}
 
 @media (min-width: 1000px) {
     .caja-form{
@@ -50,7 +56,5 @@
         margin-top: 50px;
     
     }
- }
- .errores{
-    color: red
 }
+

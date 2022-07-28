@@ -1,90 +1,108 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
 <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
-<script src="../public/js/registerValidations.js"></script>
+
 <%- include("./partials/head") %>
 
 	<body>
 		<%- include("./partials/header") %>
 			
 
-				<main>
+			<main>
 				<div class="caja-form">
+
 					<h2 class="titulo">¡Te damos la bienvenida a Clothx!</h2>
 					<h3>Creá tu cuenta!</h3>
 					
-					<div class= "errores">
-						<ul></ul>
+					<!-- VALIDACION FRONT-END -->
+					<%- include("./partials/valRegister") %> 
+					<!-- VALIDACION FRONT-END -->
+
+					<div class="errors">
+						<ul id="nameErrors"></ul>
+						<ul id="lastNameErrors"></ul>
+						<ul id="emailErrors"></ul>
+						<ul id="passwordErrors"></ul>
+						<ul id="avatarErrors"></ul>
+
 					</div>
 
-					<form action="/users" method="POST" enctype="multipart/form-data" id="formulario" class="reservation">
-
-					<div class="campos">	
-						<label>Nombre</label>
-						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.name : null %>"/>
-						<% if (locals.errors && errors.name) { %>
-							<div class="errors">
-								<%= errors.name.msg %>
-							</div>
-						<% } %>
-
-						<label>Apellido</label>
-						<input type="text" name="last_name" id="" value = "<%= locals.oldData ? oldData.last_name : null %>"/>
-						<% if (locals.errors && errors.last_name) { %>
-							<div class="errors">
-								<%= errors.last_name.msg %>
-							</div>
-						<% } %>
-
-						<label>Email</label>
-						<input type="text" name="email" id="" value = "<%= locals.oldData ? oldData.email : null %>"/>
-						<% if (locals.errors && errors.email) { %>
-							<div class="errors">
-								<%= errors.email.msg %>
-							</div>
-						<% } %>
-
-						<!-- <label>Teléfono</label>
-						<input type="text" name="phone" id="" value = "<%= locals.oldData ? oldData.phone : null %>"/>
-						<% if (locals.errors && errors.phone) { %>
-							<div class="errors">
-								<%= errors.phone.msg %>
-							</div>
-						<% } %> -->
-
-						<label>Contraseña</label>
-						<input type="password" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
-						<% if (locals.errors && errors.password) { %>
-							<div class="errors">
-								<%= errors.password.msg %>
-							</div>
-						<% } %>
-
-								
-						<div><label for="avatar" class="smallHeader">Imagen de Perfil</label>
-							<input type="file" name="avatar" id="avatar" class="form-input" value = "<%= locals.oldData ? oldData.avatar : null %>"/>
-							<% if (locals.errors && errors.avatar) { %>
+					<form action="/users" method="POST" enctype="multipart/form-data" id= "formulario">
+						
+						<div class="campos">	
+							<label>Nombre</label>
+							<input type="text" name="name" id="name" value = "<%= locals.oldData ? oldData.name : null %>"/>
+							<% if (locals.errors && errors.name) { %>
 								<div class="errors">
-									<%= errors.avatar.msg %>
+									<%= errors.name.msg %>
 								</div>
 							<% } %>
+							
 						</div>
 
+						<div class="campos">	
+							<label>Apellido</label>
+							<input type="text" name="last_name" id="last_name" value = "<%= locals.oldData ? oldData.last_name : null %>"/>
+							<% if (locals.errors && errors.last_name) { %>
+								<div class="errors">
+									<%= errors.last_name.msg %>
+								</div>
+							<% } %>
+							
+						</div>
 
-                                
+						<div class="campos">	
+							<label>Email</label>
+							<input type="text" name="email" id="email" value = "<%= locals.oldData ? oldData.email : null %>"/>
+							<% if (locals.errors && errors.email) { %>
+								<div class="errors">
+									<%= errors.email.msg %>
+								</div>
+							<% } %>
+							
+						</div>
 
+						<div class="campos">	
+							<label>Contraseña</label>
+							<input type="password" name="password" id="password" value = "<%= locals.oldData ? oldData.password : null %>"/>
+							<% if (locals.errors && errors.password) { %>
+								<div class="errors">
+									<%= errors.password.msg %>
+								</div>
+							<% } %>
+							
+						</div>
 
-					</div>
-					<br>
-					<p class="">Al presionar Crear aceptás los <a href='/tyc'>Términos y Condiciones</a>.</p>
+						<div class="campos">		
+							<div><label for="avatar" class="smallHeader">Imagen de Perfil</label>
+								<input type="file" name="avatar" id="avatar" class="form-input" value = "<%= locals.oldData ? oldData.avatar : null %>"/>
+								<% if (locals.errors && errors.avatar) { %>
+									<div class="errors">
+										<%= errors.avatar.msg %>
+									</div>
+								<% } %>
+							</div>
+							
+						</div>
+				
+						<br>
+						<p class="">Al presionar Crear aceptás los <a href='/tyc'>Términos y Condiciones</a>.</p>
+					
+						<div class="campos">
+							<button type = "submit" class ="boton"> Crear </button>
+						</div>
 
-					<div class="campos">
-						<input class="boton" type="submit" value="Crear">
-					</div>
+					</form>
+						
+
+				
+
 				</div>
-			</form>
-			<%- include("./partials/footer") %>
-		</main>
+			
+			</main>
+		<%- include("./partials/footer") %>
+		
+
 	</body>
 
 </html>

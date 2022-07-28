@@ -1,107 +1,116 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
 <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
-<script src="../public/js/productsValidations.js"></script>
 <%- include("./partials/head") %>
+
+
 
   <body>
     <%- include("./partials/header") %>
-      <form action="/products" method="POST" enctype="multipart/form-data" class="reservation2" >
-
-       
-<br>  
-			<div class="container admin">
+    
+    <main>
+      <br>  
+      <div class="container admin">
         <h2>Bienvenido <%=locals.userLogged.name%></h2> <br>
         <h2 class="botonuno"> <a href="/products/create" style="color: white;">  Cargar producto </a></h2>
         <h2 class="botonuno"> <a href="/products" style="color: white;"> Ver todos los productos </a></h2>
         <h2 class="botonuno"> <a href="/users" style="color: white;"> Ver usuarios </a></h2>
       </div>
-        
-        <div class="caja-form">
-          <h2 class="titulo">Crear publicacion de producto</h2>
           
-          <div class= "errores">
-						<ul></ul>
-					</div>
+      <div class="caja-form">
+        
+        <h2 class="titulo">Crear publicacion de producto</h2>
+        <%- include("./partials/valProdCreate") %> 
+               
+        <div class= "errores">
+          <ul id="nameErrors"></ul>
+          <ul id="descriptionErrors"></ul>
+          <ul id="colorErrors"></ul>
+          <ul id="priceErrors"></ul>
+          <ul id="imageErrors"></ul>
+        </div>
 
+        <form action="/products" method="POST" enctype="multipart/form-data" id="form2" >     
           <div class="campos">
             <label>Nombre del producto</label>
-						<input type="text" name="name" id="name" value = "<%= locals.oldData ? oldData.name : null %>"/>
-						<% if (locals.errors && errors.name) { %>
-							<div class="errors">
-								<%= errors.name.msg %>
-							</div>
-						<% } %>
+            <input type="text" name="name" id="name" value = "<%= locals.oldData ? oldData.name : null %>"/>
+            <% if (locals.errors && errors.name) { %>
+            <div class="errors">
+              <%= errors.name.msg %>
+            </div>
+            <% } %>
           </div>
 
           <div class="campos">
             <label>Descripcion del Producto</label>
-						<input type="text" name="description" id="description" value = "<%= locals.oldData ? oldData.description : null %>"/>
-						<% if (locals.errors && errors.description) { %>
-							<div class="errors">
-								<%= errors.description.msg %>
-							</div>
-						<% } %>
+            <input type="text" name="description" id="description" value = "<%= locals.oldData ? oldData.description : null %>"/>
+            <% if (locals.errors && errors.description) { %>
+            <div class="errors">
+              <%= errors.description.msg %>
+            </div>
+            <% } %>
           </div>
 
-          
-            <div class="campos">
+          <div class="campos">
             <label>Categoria del producto</label>
             <select name="category_id">
               <% categories.forEach( category=> { %>
-                <option value=<%= category.dataValues.id %> > <%=category.dataValues.name%> </option>
+              <option value=<%= category.dataValues.id %> > <%=category.dataValues.name%> </option>
               <% })%>
             </select>
-            
-              <% if (locals.errors && errors.category) { %>
-                <div class="errors">
-                  <%= errors.category.msg %>
-                </div>
-              <% } %>
-            
-          </div>
-        
-   
-                  
-          <div class="campos">
-            <label>Color</label>
-						<input type="text" name="color" id="color" value = "<%= locals.oldData ? oldData.color : null %>"/>
-						<% if (locals.errors && errors.color) { %>
-							<div class="errors">
-								<%= errors.color.msg %>
-							</div>
-						<% } %>
+          
+            <% if (locals.errors && errors.category) { %>
+            <div class="errors">
+              <%= errors.category.msg %>
+              </div>
+            <% } %>
           </div>
 
-          <label>Precio</label>
-          <input type="text" name="price" id="price" value = "<%= locals.oldData ? oldData.price : null %>"/>
-          <% if (locals.errors && errors.price) { %>
+          <div class="campos">
+            <label>Color</label>
+            <input type="text" name="color" id="color" value = "<%= locals.oldData ? oldData.color : null %>"/>
+            <% if (locals.errors && errors.color) { %>
+            <div class="errors">
+              <%= errors.color.msg %>
+            </div>
+            <% } %>
+          </div>
+
+          <div class="campos">
+            <label>Precio</label>
+            <input type="text" name="price" id="price" value = "<%= locals.oldData ? oldData.price : null %>"/>
+            <% if (locals.errors && errors.price) { %>
             <div class="errors">
               <%= errors.price.msg %>
             </div>
-          <% } %>
-
-          <div><label for="image" class="smallHeader">Imagen del Producto</label>
-            <input type="file" name="image" id="image"/>
-          </div>
-          
-          <!-- **CORREGIR VALIDACION** -->
-<!--           <div><label for="image" class="smallHeader">Imagen del Producto</label> 
-            <input type="file" name="image" id="image" class="form-input" value = "<%= locals.oldData ? oldData.image : null %>"/>
-            <% if (locals.errors && errors.image) { %>
-              <div class="errors">
-                <%= errors.image.msg %>
-              </div>
             <% } %>
-          </div> -->
+          </div>
+
+          <div class="campos">		
+            <div><label for="image" class="smallHeader">Imagen de producto</label>
+              <input type="file" name="image" id="image" class="form-input" value = "<%= locals.oldData ? oldData.image : null %>"/>
+              <% if (locals.errors && errors.image) { %>
+                <div class="errors">
+                  <%= errors.image.msg %>
+                </div>
+              <% } %>
+            </div>
+            
+          </div>
 
 
           <div class="campos">
-            <input class="crear" type="submit" value="Crear">
+            <button type = "submit" class ="boton"> Crear </button>
           </div>
-        </div>
-      </form>
-      <%- include("./partials/footer") %>
+        
+        </form>
+            
+      </div>
+      
+    </main>
+    
+    <%- include("./partials/footer") %>
+
   </body>
 
 </html>

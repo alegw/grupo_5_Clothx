@@ -1,0 +1,115 @@
+<script>
+    window.onload = function(){
+        
+        let form2 = document.getElementById("form2");
+        let inputName = document.getElementById("name");
+        let inputDescription = document.getElementById('description');
+        let inputColor = document.getElementById("color");
+        let inputPrice = document.getElementById('price')
+        let inputImage = document.getElementById('image');
+
+        let nameErrors = document.getElementById("nameErrors");
+        let descriptionErrors = document.getElementById('descriptionErrors');
+        let colorErrors = document.getElementById("colorErrors");
+        let priceErrors = document.getElementById('priceErrors');
+        let imageErrors = document.getElementById("imageErrors");
+        
+        
+        form2.addEventListener("submit", function(e){
+            
+            e.preventDefault();
+            
+            // Se inicializan los Arr de errores -------------
+            let nameErrorsAcu = 0;
+            let descriptionErrorsAcu = 0;
+            let colorErrorsAcu =0;
+            let priceErrorsAcu = 0;
+            let imageErrorsAcu = 0;
+
+            // Se definen las validaciones -------------
+
+            // Validaciones de Name
+            if (inputName.value === "") {
+                nameErrors.innerHTML = "";
+                nameErrors.innerHTML += '<li>' + "Debes introducir un nombre " + '</li>';
+                nameErrorsAcu++;
+            }else if (inputName.value.length < 5) {
+                nameErrors.innerHTML = ""
+                nameErrorsAcu++;
+                nameErrors.innerHTML += '<li class="feedback">' + "El nombre debe tener al menos 5 caracteres" + '</li>'
+            }else {
+                nameErrors.innerHTML = "";
+                nameErrorsAcu = 0;
+            }
+
+            // Validaciones de Description
+            if (inputDescription.value === "") {
+                descriptionErrors.innerHTML = "";
+                descriptionErrors.innerHTML += '<li>' + "Debes introducir una description " + '</li>';
+                descriptionErrorsAcu++;
+            }else if (inputDescription.value.length < 20) {
+                descriptionErrors.innerHTML = ""
+                descriptionErrorsAcu++;
+                descriptionErrors.innerHTML += '<li class="feedback">' + "La descripcion debe tener al menos 20 caracteres" + '</li>'
+            }else {
+                descriptionErrors.innerHTML = "";
+                descriptionErrorsAcu = 0;
+            }
+
+            // Validaciones de Color
+            if (inputColor.value === "") {
+                colorErrors.innerHTML = "";
+                colorErrors.innerHTML += '<li>' + "Debes introducir un color " + '</li>';
+                colorErrorsAcu++;
+            }else {
+                colorErrors.innerHTML = "";
+                colorErrorsAcu = 0;
+            }
+
+            // Validaciones de Precio
+            if (inputPrice.value === "") {
+                priceErrors.innerHTML = "";
+                priceErrors.innerHTML += '<li>' + "Debes introducir un precio " + '</li>';
+                priceErrorsAcu++;
+            }else {
+                priceErrors.innerHTML = "";
+                priceErrorsAcu = 0;
+            }
+                          
+            // Validaciones de Imagen
+            let image = inputImage.value;
+            let extensionesValidas = [".jpg", ".png", ".gif" ];
+            let fileExtension = image.substring(image.lastIndexOf('.'),image.length);
+            console.log(fileExtension) 
+            
+            if (inputImage.value === "") {    
+                imageErrors.innerHTML = "";
+                imageErrors.innerHTML += '<li>' + "Debes introducir una imagen" + '</li>';
+                imageErrorsAcu++;
+            }else if (!extensionesValidas.includes(fileExtension)){
+                imageErrors.innerHTML = "";
+                imageErrors.innerHTML += '<li>' + `Las extensiones de imagen permitidas son: ${extensionesValidas.join(', ')}` + '</li>';
+                imageErrorsAcu++;
+            }else {
+                imageErrors.innerHTML = "";
+                imageErrorsAcu = 0;
+            }
+
+            // Se suman los acumuladores de errores ------------------
+            let AcuErrors =
+            nameErrorsAcu + 
+            descriptionErrorsAcu + 
+            colorErrorsAcu +
+            priceErrorsAcu +
+            imageErrorsAcu ;
+
+
+
+            // Si no hay errores se hace el submit del formulario
+            if (AcuErrors === 0) {
+                form2.submit();
+            }
+        })
+    }
+
+</script>

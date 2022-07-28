@@ -6,74 +6,69 @@
 
   <body>
     <!-- Header -->
-
     <%- include("./partials/header") %>
+    <!-- Header -->
+    <main>
 
       <div class="caja-form">
 
         <h2 class="titulo">¡Hola! <br> Ingresá tu usuario y contraseña</h2>
-
-          <form action="/users/login" method="POST">
-            <div class="campos">
-              <label for="nombre"> Email</label>
-              <input type="text" name="email" id="">
-            </div>
-            <div class="campos">
-              <label for="nombre"> Contraseña</label>
-              <input type="password" name="password" id="">
-            </div>
-            <div class="campos">
-              <input class="boton" type="submit">
-            </div>
-          </form>
-
-        <form action="/users/login" method="POST">
-          <div class="campos">
-            <label>Email</label>
-						<input type="text" name="email" id="" value = "<%= locals.oldData ? oldData.email : null %>"/>
-						<% if (locals.errors && errors.email) { %>
-							<div class="errores">
-								<%= errors.email.msg %>
-							</div>
-						<% } %>
-          </div>
-
-
-          <div class="campos">
-            <label>Contraseña</label>
-						<input type="password" name="password" id="" value = "<%= locals.oldData ? oldData.password : null %>"/>
-						<% if (locals.errors && errors.password) { %>
-							<div class="errors">
-								<%= errors.password.msg %>
-							</div>
-						<% } %>
-          </div>
-
-
-          <div class="campos">
-            <input class="boton" type="submit">
-          </div>
-        </form>
         
-        <div class="olvide-y-crear">
-          <a href="/users/reestablecer">
-            <p class="letra-olvide">Olvide mi contraseña</p>
-          </a>
-          <a href="/users/create">
-            <p class="letra-olvide der">Crear cuenta</p>
-          </a>
-        </div>
+          <!-- VALIDACION FRONT-END -->
+          <%- include("./partials/valLogin") %>
+          <!-- VALIDACION FRONT-END -->
+
+          <div class="errors">
+            <ul id="emailErrors"></ul>
+            <ul id="passwordErrors"></ul>
+          </div>  
+
+
+          <form action="/users/login" method="POST" id="form">
+
+            <div class="campos">
+              <label>Email</label>
+              <input type="text"  name="email" id="email" value = "<%= locals.oldData ? oldData.email : null %>"/>
+              <% if (locals.errors && errors.email) { %>
+                <div class="errores">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>              
+            </div>
+
+            <div class="campos">
+              <label>Contraseña</label>
+              <input type="password" name="password" id="password" value = "<%= locals.oldData ? oldData.password : null %>"/>
+              <% if (locals.errors && errors.password) { %>
+                <div class="errors">
+                  <%= errors.password.msg %>
+                </div>
+              <% } %>
+            </div>
+
+            <div class="campos">
+              <button type = "submit" class ="boton"> Iniciar Sesión</button>
+            </div>
+
+
+            <div class="olvide-y-crear">
+              <a href="/users/reestablecer">
+                <p class="letra-olvide">Olvide mi contraseña</p>
+              </a>
+              <a href="/users/create">
+                <p class="letra-olvide der">Crear cuenta</p>
+              </a>
+            </div>
+
+          </form>
 
       </div>
 
-
-
-
-
       <!-- footer -->
 
-      <%- include("./partials/footer") %>
-
+    
+    </main>
+    <%- include("./partials/footer") %>
 
   </body>
 
