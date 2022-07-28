@@ -20,4 +20,13 @@ router.get("/tyc", function (req, res, next) {
 
 
 
+let routesProductsAPI = require ("./api/products");
+let routesUsersAPI = require ("./api/users");
+
+//rutas API
+router.use("/api/products", routesProductsAPI);
+router.use("/api/users", routesUsersAPI);
+
+
+
 module.exports = router;

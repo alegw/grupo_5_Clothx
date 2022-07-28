@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema clothx_db
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema clothx_db
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `clothx_db` DEFAULT CHARACTER SET utf8 ;
+USE `clothx_db` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`products`
+-- Table `clothx_db`.`products`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`products` (
+CREATE TABLE IF NOT EXISTS `clothx_db`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`products` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`users`
+-- Table `clothx_db`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`users` (
+CREATE TABLE IF NOT EXISTS `clothx_db`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `last_name` VARCHAR(45) NULL,
@@ -51,34 +51,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   ) ENGINE = InnoDB;
 
 
+
+
 -- -----------------------------------------------------
--- Table `mydb`.`colors`
+-- Table `clothx_db`.`categories`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`colors` (
+CREATE TABLE IF NOT EXISTS `clothx_db`.`categories` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`categories`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`categories` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`users_categories`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`users_categories` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `user_type` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

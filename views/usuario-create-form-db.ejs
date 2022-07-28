@@ -1,24 +1,30 @@
 <!DOCTYPE html><!-- EN USO-->
 <html lang="en">
 <link href="/css/stylesProductCreate.css" rel="stylesheet" type="text/css">
+<script src="../public/js/registerValidations.js"></script>
 <%- include("./partials/head") %>
 
 	<body>
 		<%- include("./partials/header") %>
 			
 
-				<main></main>
+				<main>
 				<div class="caja-form">
 					<h2 class="titulo">¡Te damos la bienvenida a Clothx!</h2>
 					<h3>Creá tu cuenta!</h3>
-					<form action="/users" method="POST" enctype="multipart/form-data">
+					
+					<div class= "errors">
+						<ul></ul>
+					</div>
+
+					<form action="/users" method="POST" enctype="multipart/form-data" id="formulario" class="reservation">
 
 					<div class="campos">	
 						<label>Nombre</label>
-						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.first_name : null %>"/>
-						<% if (locals.errors && errors.first_name) { %>
+						<input type="text" name="name" id="" value = "<%= locals.oldData ? oldData.name : null %>"/>
+						<% if (locals.errors && errors.name) { %>
 							<div class="errors">
-								<%= errors.first_name.msg %>
+								<%= errors.name.msg %>
 							</div>
 						<% } %>
 
@@ -78,6 +84,7 @@
 				</div>
 			</form>
 			<%- include("./partials/footer") %>
+		</main>
 	</body>
 
 </html>

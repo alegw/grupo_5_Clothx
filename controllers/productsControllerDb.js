@@ -11,7 +11,6 @@ const controller = {
             .then(function(products){
 				console.log(products)
                  res.render("products", {products:products});
-    
             })
 	},
 
