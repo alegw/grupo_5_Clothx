@@ -1,52 +1,74 @@
 const db = require('../../database/models');
 
 const productsAPIController = {
-
-    list: (req, res) => {
-        db.Product.findAll()
-            .then(products => {
-
-                let productosArray = [];
-
-                products.forEach(products => {
-                    let data = {
-                        id: products.id,
-                        name: products.name,
-                        email: products.email,
-                        detail: "/api/products/" + products.id
-                    }
-                    productosArray.push(data)
-                })
-
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        url: "/api/products"
-                    },
-                    count: products.length,
-                    data: productosArray
-                }
-                res.json(respuesta);
-            })
+    list: async (req, res) => {
+        let products = await db.Product.findAll({
+            attributes: ["id","name"]
+        });
+        products.forEach(product => {
+            product.dataValues.detail = `/api/products/${product.dataValues.id}`;
+        })
+        let categories = await db.Category.findAll({
+            attributes: ["id","name"],
+            include: [{association:"products"}]
+        })
+        let respuesta = {
+            meta: {
+                status: 200,
+                url: "/api/products"
+            },
+            count: products.length,
+            data: products,
+            categories: categories
+        }
+        res.json(respuesta);
     },
 
-    detail: (req, res) => {
-        db.Product.findByPk(req.params.id, {
+    // list: (req, res) => {
+    //     db.Product.findAll()
+    //         .then(products => {
 
-        }) 
-            .then(products => {
+    //             let productosArray = [];
+
+    //             products.forEach(products => {
+    //                 let data = {
+    //                     id: products.id,
+    //                     name: products.name,
+    //                     email: products.email,
+    //                     detail: "/api/products/" + products.id
+    //                 }
+    //                 productosArray.push(data)
+    //             })
+
+    //             let respuesta = {
+    //                 meta: {
+    //                     status: 200,
+    //                     url: "/api/products"
+    //                 },
+    //                 count: products.length,
+    //                 data: productosArray
+    //             }
+    //             res.json(respuesta);
+    //         })
+    // },
+
+    // detail: (req, res) => {
+    //     db.Product.findByPk(req.params.id, {
+
+    //     }) 
+    //         .then(products => {
                
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        url: "/api/products/" + products.id
-                    },
-                    data: {products}
-                }
-                res.json(respuesta)
-            })
+    //             let respuesta = {
+    //                 meta: {
+    //                     status: 200,
+    //                     url: "/api/products/" + products.id
+    //                 },
+    //                 data: {products}
+    //             }
+    //             res.json(respuesta)
+    //         })
 
-    }
+    // }
 
     // list: (req, res) => {
        
@@ -86,38 +108,38 @@ const productsAPIController = {
     //             res.json(respuesta);
     //         })
     //     },
-            // detail: (req, res) => {
-            //     db.Product.findByPk(req.params.id, {
-            //         include : ["categories"]
+            detail: (req, res) => {
+                db.Product.findByPk(req.params.id, {
+                    include : ["categories"]
 
         
-            //     }) 
-            //         .then(producto => {
-            //             //delete user.dataValues.password
-            //             console.log(producto)
-            //             let urlImageProducto = "http://localhost:3001/img/products/" + producto.image 
-            //             let categoria = producto.categories
-            //             delete producto.dataValues.categories
+                }) 
+                    .then(producto => {
+                        //delete user.dataValues.password
+                        console.log(producto)
+                        let urlImageProducto = "http://localhost:3001/img/products/" + producto.image 
+                        let categoria = producto.categories
+                        delete producto.dataValues.categories
 
-            //             let respuesta = {
-            //                 meta: {
-            //                     status: 200,
-            //                     url: "http://localhost:3001/api/products/detail/" + producto.id
+                        let respuesta = {
+                            meta: {
+                                status: 200,
+                                url: "http://localhost:3001/api/products/detail/" + producto.id
 
-            //                 },
-            //                 relations: {
-            //                     category: categoria
-            //                 },
-
-
-            //                 data: {producto, urlImageProducto}
-            //             }
+                            },
+                            relations: {
+                                category: categoria
+                            },
 
 
-            //             res.json(respuesta);
-            //         })
+                            data: {producto, urlImageProducto}
+                        }
 
-            //     }
+
+                        res.json(respuesta);
+                    })
+
+                }
 
  
 
