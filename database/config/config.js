@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "12345678",
     "database": "clothx_db",
     "host": "127.0.0.1",
     "dialect": "mysql",

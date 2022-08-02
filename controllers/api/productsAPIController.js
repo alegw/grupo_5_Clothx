@@ -3,7 +3,8 @@ const db = require('../../database/models');
 const productsAPIController = {
     list: async (req, res) => {
         let products = await db.Product.findAll({
-            attributes: ["id","name"]
+            attributes: ["id","name","description","color","image","price"],
+            include: [{association:"category"}]
         });
         products.forEach(product => {
             product.dataValues.detail = `/api/products/${product.dataValues.id}`;

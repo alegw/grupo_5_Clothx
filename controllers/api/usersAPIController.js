@@ -11,6 +11,7 @@ const usersAPIController = {
                     let data = {
                         id: users.id,
                         name: users.name,
+                        last_name: users.last_name,
                         email: users.email,
                         detail: "/api/users/" + users.id
                     }
