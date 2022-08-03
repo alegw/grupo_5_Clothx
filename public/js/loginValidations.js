@@ -1,58 +1,118 @@
 window.onload = function(){
+    
+    let formulario = document.getElementById("formulario");
+    let inputName = document.getElementById("name");
+    let inputLastName = document.getElementById('last_name');
     let inputEmail = document.getElementById("email");
     let inputPassword = document.getElementById('password');
-    let form = document.getElementById("form");
+    let inputAvatar = document.getElementById('avatar');
 
-    console.log(form)
-
-    // Se capturan los Ul de errores -------------
+    let nameErrors = document.getElementById("nameErrors");
+    let lastNameErrors = document.getElementById('lastNameErrors');
     let emailErrors = document.getElementById("emailErrors");
     let passwordErrors = document.getElementById('passwordErrors');
+    let avatarErrors = document.getElementById("avatarErrors");
+    
 
-    form.addEventListener("submit", (e) => {
+    formulario.addEventListener("submit", function(e){
+        
+        e.preventDefault();
+        
+        // Se inicializan los Arr de errores -------------
+        let nameErrorsAcu = 0;
+        let lastNameErrorsAcu = 0;
+        let emailErrorsAcu =0;
+        let passwordErrorsAcu = 0;
+        let avatarErrorsAcu = 0;
 
-    e.preventDefault();
+        // Se definen las validaciones -------------
 
-    // Se inicializan los Arr de errores -------------
-    let emailErrorsAcu = 0;
-    let passwordErrorsAcu = 0;
+        // Validaciones de Name
+        if (inputName.value === "") {
+            nameErrors.innerHTML = "";
+            nameErrors.innerHTML += '<li class="feedback">' + "Debes introducir un nombre " + '</li>';
+            nameErrorsAcu++;
+        }else if (inputName.value.length < 2) {
+            nameErrors.innerHTML = ""
+            nameErrorsAcu++;
+            nameErrors.innerHTML += '<li class="feedback">' + "Debes introducir un nombre mas largo" + '</li>'
+        }else {
+            nameErrors.innerHTML = "";
+            nameErrorsAcu = 0;
+        }
 
-    // Se definen las validaciones -------------
+        // Validaciones de Last Name
+        if (inputLastName.value === "") {
+            lastNameErrors.innerHTML = "";
+            lastNameErrors.innerHTML += '<li class="feedback">' + "Debes introducir un apellido " + '</li>';
+            lastNameErrorsAcu++;
+        }else if (inputName.value.length < 2) {
+            lastNameErrors.innerHTML = ""
+            lastNameErrorsAcu++;
+            lastNameErrors.innerHTML += '<li class="feedback">' + "Debes introducir un apellido mas largo" + '</li>'
+        }else {
+            lastNameErrors.innerHTML = "";
+            lastNameErrorsAcu = 0;
+        }
 
-    // Validaciones de Email
-    if (inputEmail.value === "") {
-        /* inputEmail.classList.add('control-error') */
-        emailErrors.innerHTML = "";
-        emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un email" + '</li>';
-        emailErrorsAcu++;
-    } else {
-        /* inputEmail.classList.remove('control-error') */
-        emailErrors.innerHTML = "";
-        emailErrorsAcu = 0;
-    }
+        // Validaciones de Email
 
-    // Validaciones de Password
-    if (inputPassword.value === "") {
-        /* inputPassword.classList.add('control-error'); */
-        passwordErrors.innerHTML = "";
-        passwordErrors.innerHTML += '<li class="feedback">' + "Debes introducir una contraseña" + '</li>';
-        passwordErrorsAcu++;
-    } else {
-        /* inputPassword.classList.remove('control-error') */
-        passwordErrors.innerHTML = "";
-        passwordErrorsAcu = 0;
-    }
+        if (inputEmail.value === "") {
+            emailErrors.innerHTML = "";
+            emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un email" + '</li>';
+            emailErrorsAcu++;
+        
+        }else {
+            emailErrors.innerHTML = "";
+            emailErrorsAcu = 0;
+        }
 
-    // Se suman los acumuladores de errores ------------------
-    let AcuErrors =
+        // Validaciones de Password
+        if (inputPassword.value === "") {
+            passwordErrors.innerHTML = "";
+            passwordErrors.innerHTML += '<li class="feedback">' + "Debes introducir una contraseña" + '</li>';
+            passwordErrorsAcu++;
+        }else if (inputPassword.value.length < 3) {
+            passwordErrors.innerHTML = ""
+            passwordErrorsAcu++;
+            passwordErrors.innerHTML += '<li class="feedback">' + "Debes introducir una contraseña mas larga" + '</li>'
+        }else {
+            passwordErrors.innerHTML = "";
+            passwordErrorsAcu = 0
+        }
+
+                
+        // Validaciones de Avatar
+        let avatar = inputAvatar.value;
+        let extensionesValidas = [".jpg", ".png", ".gif" ];
+        let fileExtension = avatar.substring(avatar.lastIndexOf('.'),avatar.length);
+        console.log(fileExtension) 
+        
+        if (inputAvatar.value === "") {    
+            avatarErrors.innerHTML = "";
+            avatarErrors.innerHTML += '<li class="feedback">' + "Debes introducir una imagen" + '</li>';
+            avatarErrorsAcu++;
+        }else if (!extensionesValidas.includes(fileExtension)){
+            avatarErrors.innerHTML = "";
+            avatarErrors.innerHTML += '<li class="feedback">' + `Las extensiones de imagen permitidas son: ${extensionesValidas.join(', ')}` + '</li>';
+            avatarErrorsAcu++;
+        }else {
+            avatarErrors.innerHTML = "";
+            avatarErrorsAcu = 0;
+        }
+
+        // Se suman los acumuladores de errores ------------------
+        let AcuErrors =
+        nameErrorsAcu +
+        lastNameErrorsAcu +
         emailErrorsAcu +
-        passwordErrorsAcu;
+        passwordErrorsAcu +
+        avatarErrorsAcu; 
 
 
-    // Si no hay errores se hace el submit del formulario
-    if (AcuErrors === 0) {
-        form.submit();
-    }
-
+        // Si no hay errores se hace el submit del formulario
+        if (AcuErrors === 0) {
+            formulario.submit();
+        }
     })
 }

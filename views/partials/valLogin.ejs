@@ -20,25 +20,30 @@
         // Se definen las validaciones -------------
 
         // Validaciones de Email
+
+        var expReg = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;  //expresion regular para validar email
+        var esValido = expReg.test(inputEmail.value)
+
+        console.log(esValido)
         if (inputEmail.value === "") {
-            /* inputEmail.classList.add('control-error') */
             emailErrors.innerHTML = "";
             emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un email" + '</li>';
             emailErrorsAcu++;
-        } else {
-            /* inputEmail.classList.remove('control-error') */
+        }else if (esValido == false) {
+        emailErrors.innerHTML = "";
+        emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un formato de email válido" + '</li>';
+        emailErrorsAcu++;
+        }else {
             emailErrors.innerHTML = "";
             emailErrorsAcu = 0;
         }
 
         // Validaciones de Password
         if (inputPassword.value === "") {
-            /* inputPassword.classList.add('control-error'); */
             passwordErrors.innerHTML = "";
             passwordErrors.innerHTML += '<li class="feedback">' + "Debes introducir una contraseña" + '</li>';
             passwordErrorsAcu++;
         } else {
-            /* inputPassword.classList.remove('control-error') */
             passwordErrors.innerHTML = "";
             passwordErrorsAcu = 0;
         }

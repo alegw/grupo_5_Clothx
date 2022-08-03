@@ -55,9 +55,16 @@
             }
 
             // Validaciones de Email
+            var expReg = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;  //expresion regular para validar email
+            var esValido = expReg.test(inputEmail.value)
+
             if (inputEmail.value === "") {
                 emailErrors.innerHTML = "";
                 emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un email" + '</li>';
+                emailErrorsAcu++;
+            }else if (esValido == false) {
+                emailErrors.innerHTML = "";
+                emailErrors.innerHTML += '<li class="feedback">' + "Debes introducir un formato de email válido" + '</li>';
                 emailErrorsAcu++;
             }else {
                 emailErrors.innerHTML = "";
